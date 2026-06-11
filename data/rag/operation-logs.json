@@ -1,0 +1,367 @@
+{
+  "logs" : [ {
+    "id" : "63a790f3-87d1-4445-860f-4588503cf33a",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "hitCount" : 5,
+      "question" : "？"
+    },
+    "createdAt" : "2026-06-11T10:08:55.0264314"
+  }, {
+    "id" : "08369925-12b2-4155-aa65-a09eca6f0026",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "hitCount" : 5,
+      "question" : "你好"
+    },
+    "createdAt" : "2026-06-11T10:06:07.691251"
+  }, {
+    "id" : "500472e6-d60f-472b-b24d-c403403654e8",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "宁波",
+      "hitCount" : 5
+    },
+    "createdAt" : "2026-06-10T17:17:19.5327038"
+  }, {
+    "id" : "9c4a4e8d-b312-480d-a700-d5f84eb2b4c7",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "你是谁",
+      "hitCount" : 5
+    },
+    "createdAt" : "2026-06-10T17:17:07.7592493"
+  }, {
+    "id" : "0d6ba847-d5ac-49d9-8121-7930beaf90b0",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "？",
+      "hitCount" : 5
+    },
+    "createdAt" : "2026-06-10T17:16:40.4115957"
+  }, {
+    "id" : "0453c42a-eed0-4b40-a71a-101995481f28",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "你好卢可的简历都写了哪些东西",
+      "hitCount" : 5
+    },
+    "createdAt" : "2026-06-10T17:16:27.5152736"
+  }, {
+    "id" : "92bb2808-ff03-4550-b62a-ec5b249a8e26",
+    "type" : "INDEX_DONE",
+    "message" : "Document indexed",
+    "documentId" : "300771b5-796c-403a-9495-da1c00f837c3",
+    "detail" : {
+      "chunkCount" : 4
+    },
+    "createdAt" : "2026-06-10T17:16:01.9257255"
+  }, {
+    "id" : "1f57f45c-5e25-4c05-99cb-fa4e0b6ae9ed",
+    "type" : "INDEX_START",
+    "message" : "Start indexing document",
+    "documentId" : "300771b5-796c-403a-9495-da1c00f837c3",
+    "detail" : {
+      "rebuild" : true
+    },
+    "createdAt" : "2026-06-10T17:16:01.8139285"
+  }, {
+    "id" : "81c86ce0-470b-4f2b-81a4-cc28d05b661a",
+    "type" : "MQ_DISABLED",
+    "message" : "RocketMQ disabled, use local async indexing",
+    "documentId" : "300771b5-796c-403a-9495-da1c00f837c3",
+    "detail" : { },
+    "createdAt" : "2026-06-10T17:16:01.8059275"
+  }, {
+    "id" : "bda6c6c3-cefb-4be4-9362-247728faf6d3",
+    "type" : "REINDEX_REQUEST",
+    "message" : "Document reindex requested",
+    "documentId" : "300771b5-796c-403a-9495-da1c00f837c3",
+    "detail" : {
+      "fileName" : "简历 (5).pdf"
+    },
+    "createdAt" : "2026-06-10T17:16:01.803928"
+  }, {
+    "id" : "9ad64cd6-dc32-4c33-8789-825444e0f8e3",
+    "type" : "INDEX_DONE",
+    "message" : "Document indexed",
+    "documentId" : "300771b5-796c-403a-9495-da1c00f837c3",
+    "detail" : {
+      "chunkCount" : 4
+    },
+    "createdAt" : "2026-06-10T17:15:20.4513252"
+  }, {
+    "id" : "403c437d-4361-456c-ade3-d8c0891b2801",
+    "type" : "INDEX_START",
+    "message" : "Start indexing document",
+    "documentId" : "300771b5-796c-403a-9495-da1c00f837c3",
+    "detail" : {
+      "rebuild" : false
+    },
+    "createdAt" : "2026-06-10T17:15:20.3618169"
+  }, {
+    "id" : "bb4cd70b-17e5-4216-b967-803d2173f3ab",
+    "type" : "MQ_DISABLED",
+    "message" : "RocketMQ disabled, use local async indexing",
+    "documentId" : "300771b5-796c-403a-9495-da1c00f837c3",
+    "detail" : { },
+    "createdAt" : "2026-06-10T17:15:20.3530174"
+  }, {
+    "id" : "a339aeec-a2d1-4d5a-be78-d3583e1404cf",
+    "type" : "UPLOAD",
+    "message" : "Document uploaded",
+    "documentId" : "300771b5-796c-403a-9495-da1c00f837c3",
+    "detail" : {
+      "fileName" : "简历 (5).pdf",
+      "size" : 128578
+    },
+    "createdAt" : "2026-06-10T17:15:20.3510001"
+  }, {
+    "id" : "0d23aa05-b8f1-4721-af21-7dbd55237e91",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "pgvector 是用来做什么的？",
+      "hitCount" : 2
+    },
+    "createdAt" : "2026-06-10T17:14:25.6235682"
+  }, {
+    "id" : "484db35f-d7f4-4a5b-8991-b80e228b247c",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "这份简历主要写了什么？",
+      "hitCount" : 3
+    },
+    "createdAt" : "2026-06-10T17:13:32.8796735"
+  }, {
+    "id" : "0d134cd9-4f11-40f5-8af2-9c235da1e06b",
+    "type" : "INDEX_DONE",
+    "message" : "Document indexed",
+    "documentId" : "9cd84776-7088-4a09-bdf1-9aaffa79e52e",
+    "detail" : {
+      "chunkCount" : 2
+    },
+    "createdAt" : "2026-06-10T17:13:32.2760328"
+  }, {
+    "id" : "c99fb9bd-a112-4213-aeb4-d1787deac240",
+    "type" : "INDEX_START",
+    "message" : "Start indexing document",
+    "documentId" : "9cd84776-7088-4a09-bdf1-9aaffa79e52e",
+    "detail" : {
+      "rebuild" : false
+    },
+    "createdAt" : "2026-06-10T17:13:32.2238751"
+  }, {
+    "id" : "6c57a1b2-9878-45ed-b135-feb9bb979be7",
+    "type" : "MQ_DISABLED",
+    "message" : "RocketMQ disabled, use local async indexing",
+    "documentId" : "9cd84776-7088-4a09-bdf1-9aaffa79e52e",
+    "detail" : { },
+    "createdAt" : "2026-06-10T17:13:32.218497"
+  }, {
+    "id" : "f4321c0e-9bf8-4132-8c8a-cd2f813996f0",
+    "type" : "UPLOAD",
+    "message" : "Document uploaded",
+    "documentId" : "9cd84776-7088-4a09-bdf1-9aaffa79e52e",
+    "detail" : {
+      "fileName" : "smoke-upload.txt",
+      "size" : 6044
+    },
+    "createdAt" : "2026-06-10T17:13:32.2167867"
+  }, {
+    "id" : "dd5a927e-39fe-4a89-9c25-fb1a5dac3463",
+    "type" : "INDEX_DONE",
+    "message" : "Document indexed",
+    "documentId" : "a177887a-4b07-478c-9017-8e8aaad6d124",
+    "detail" : {
+      "chunkCount" : 4
+    },
+    "createdAt" : "2026-06-10T17:12:17.835469"
+  }, {
+    "id" : "c5c7f041-b4af-427d-baf2-fcd59546eba7",
+    "type" : "INDEX_DONE",
+    "message" : "Document indexed",
+    "documentId" : "cacb7de7-6d43-45e4-90c8-db948cb2b868",
+    "detail" : {
+      "chunkCount" : 4
+    },
+    "createdAt" : "2026-06-10T17:12:17.8344701"
+  }, {
+    "id" : "644dbeb1-8701-4281-a611-29ff60404127",
+    "type" : "INDEX_DONE",
+    "message" : "Document indexed",
+    "documentId" : "a3f95073-0016-4460-97e6-f292ca557faf",
+    "detail" : {
+      "chunkCount" : 4
+    },
+    "createdAt" : "2026-06-10T17:12:17.8344701"
+  }, {
+    "id" : "fa23fa2b-4608-4ccf-8054-5bab30d4aef0",
+    "type" : "INDEX_START",
+    "message" : "Start indexing document",
+    "documentId" : "a177887a-4b07-478c-9017-8e8aaad6d124",
+    "detail" : {
+      "rebuild" : true
+    },
+    "createdAt" : "2026-06-10T17:12:17.5954039"
+  }, {
+    "id" : "07419840-bfbc-48bb-afc9-227c87cf41d5",
+    "type" : "MQ_DISABLED",
+    "message" : "RocketMQ disabled, use local async indexing",
+    "documentId" : "a177887a-4b07-478c-9017-8e8aaad6d124",
+    "detail" : { },
+    "createdAt" : "2026-06-10T17:12:17.588404"
+  }, {
+    "id" : "c689afc5-549b-4d84-9113-0796c0054049",
+    "type" : "REINDEX_REQUEST",
+    "message" : "Document reindex requested",
+    "documentId" : "a177887a-4b07-478c-9017-8e8aaad6d124",
+    "detail" : {
+      "fileName" : "简历 (5).pdf"
+    },
+    "createdAt" : "2026-06-10T17:12:17.5864051"
+  }, {
+    "id" : "0e12a50a-6c3d-4170-ac97-0442d89e89a1",
+    "type" : "INDEX_START",
+    "message" : "Start indexing document",
+    "documentId" : "a3f95073-0016-4460-97e6-f292ca557faf",
+    "detail" : {
+      "rebuild" : true
+    },
+    "createdAt" : "2026-06-10T17:12:17.5784042"
+  }, {
+    "id" : "31f11e66-351f-481e-a81b-402be3319031",
+    "type" : "INDEX_START",
+    "message" : "Start indexing document",
+    "documentId" : "cacb7de7-6d43-45e4-90c8-db948cb2b868",
+    "detail" : {
+      "rebuild" : true
+    },
+    "createdAt" : "2026-06-10T17:12:17.5784042"
+  }, {
+    "id" : "0b7fed87-7391-4d17-abcb-b4dbc4a5c824",
+    "type" : "MQ_DISABLED",
+    "message" : "RocketMQ disabled, use local async indexing",
+    "documentId" : "a3f95073-0016-4460-97e6-f292ca557faf",
+    "detail" : { },
+    "createdAt" : "2026-06-10T17:12:17.5689984"
+  }, {
+    "id" : "81f45030-19b9-414f-8bf4-5cce3a983176",
+    "type" : "MQ_DISABLED",
+    "message" : "RocketMQ disabled, use local async indexing",
+    "documentId" : "cacb7de7-6d43-45e4-90c8-db948cb2b868",
+    "detail" : { },
+    "createdAt" : "2026-06-10T17:12:17.5689984"
+  }, {
+    "id" : "966547da-3309-4c97-af56-2f21d8bc33a8",
+    "type" : "REINDEX_REQUEST",
+    "message" : "Document reindex requested",
+    "documentId" : "a3f95073-0016-4460-97e6-f292ca557faf",
+    "detail" : {
+      "fileName" : "简历 (5).pdf"
+    },
+    "createdAt" : "2026-06-10T17:12:17.5588217"
+  }, {
+    "id" : "f83a0178-e26c-4f48-b6c8-ad0b7dc03743",
+    "type" : "REINDEX_REQUEST",
+    "message" : "Document reindex requested",
+    "documentId" : "cacb7de7-6d43-45e4-90c8-db948cb2b868",
+    "detail" : {
+      "fileName" : "简历 (5).pdf"
+    },
+    "createdAt" : "2026-06-10T17:12:17.5578224"
+  }, {
+    "id" : "82db6533-6b8f-4147-b55b-8a905544797a",
+    "type" : "INDEX_START",
+    "message" : "Start indexing document",
+    "documentId" : "cacb7de7-6d43-45e4-90c8-db948cb2b868",
+    "detail" : {
+      "rebuild" : false
+    },
+    "createdAt" : "2026-06-10T17:02:47.4272428"
+  }, {
+    "id" : "799d3a48-0964-40f2-854f-473f23e65256",
+    "type" : "MQ_DISABLED",
+    "message" : "RocketMQ disabled, use local async indexing",
+    "documentId" : "cacb7de7-6d43-45e4-90c8-db948cb2b868",
+    "detail" : { },
+    "createdAt" : "2026-06-10T17:02:47.4182433"
+  }, {
+    "id" : "6f9a6e28-06c7-4c36-aec7-473e4bab4ef8",
+    "type" : "UPLOAD",
+    "message" : "Document uploaded",
+    "documentId" : "cacb7de7-6d43-45e4-90c8-db948cb2b868",
+    "detail" : {
+      "size" : 128578,
+      "fileName" : "简历 (5).pdf"
+    },
+    "createdAt" : "2026-06-10T17:02:47.4162421"
+  }, {
+    "id" : "ab2100b4-fd55-46cc-9924-b887293247a2",
+    "type" : "INDEX_START",
+    "message" : "Start indexing document",
+    "documentId" : "a177887a-4b07-478c-9017-8e8aaad6d124",
+    "detail" : {
+      "rebuild" : false
+    },
+    "createdAt" : "2026-06-10T17:02:46.9137346"
+  }, {
+    "id" : "aaf85bc7-c00a-400e-82f4-3f6bdd491ea9",
+    "type" : "MQ_DISABLED",
+    "message" : "RocketMQ disabled, use local async indexing",
+    "documentId" : "a177887a-4b07-478c-9017-8e8aaad6d124",
+    "detail" : { },
+    "createdAt" : "2026-06-10T17:02:46.8907364"
+  }, {
+    "id" : "f167e1f9-e2da-4a4f-8e9a-30bb90381c71",
+    "type" : "UPLOAD",
+    "message" : "Document uploaded",
+    "documentId" : "a177887a-4b07-478c-9017-8e8aaad6d124",
+    "detail" : {
+      "size" : 128578,
+      "fileName" : "简历 (5).pdf"
+    },
+    "createdAt" : "2026-06-10T17:02:46.8827344"
+  }, {
+    "id" : "fd73aa42-cc8f-4135-a757-1668fa1b7a94",
+    "type" : "INDEX_START",
+    "message" : "Start indexing document",
+    "documentId" : "a3f95073-0016-4460-97e6-f292ca557faf",
+    "detail" : {
+      "rebuild" : false
+    },
+    "createdAt" : "2026-06-10T17:02:46.3513681"
+  }, {
+    "id" : "83fa802b-655e-4d09-bfdb-992f262b29ef",
+    "type" : "MQ_DISABLED",
+    "message" : "RocketMQ disabled, use local async indexing",
+    "documentId" : "a3f95073-0016-4460-97e6-f292ca557faf",
+    "detail" : { },
+    "createdAt" : "2026-06-10T17:02:46.3277079"
+  }, {
+    "id" : "87268c05-182c-4bd0-9108-b93197d76c2b",
+    "type" : "UPLOAD",
+    "message" : "Document uploaded",
+    "documentId" : "a3f95073-0016-4460-97e6-f292ca557faf",
+    "detail" : {
+      "size" : 128578,
+      "fileName" : "简历 (5).pdf"
+    },
+    "createdAt" : "2026-06-10T17:02:46.2921686"
+  } ]
+}

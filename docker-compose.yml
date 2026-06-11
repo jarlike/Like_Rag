@@ -1,0 +1,68 @@
+version: "3.8"
+
+services:
+  pgvector-db:
+    image: pgvector/pgvector:pg16
+    container_name: pgvector-db
+    environment:
+      POSTGRES_DB: rag
+      POSTGRES_USER: rag
+      POSTGRES_PASSWORD: rag123
+      TZ: Asia/Shanghai
+    ports:
+      - "15432:5432"
+    volumes:
+      - pgvector_data:/var/lib/postgresql/data
+      - ./postgres/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U rag -d rag" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - rocketmq
+
+  rocketmq-namesrv:
+    image: apache/rocketmq:5.3.2
+    container_name: rocketmq-namesrv
+    command: sh mqnamesrv
+    ports:
+      - "9876:9876"
+    volumes:
+      - ./data/rocketmq/namesrv/logs:/home/rocketmq/logs
+    networks:
+      - rocketmq
+
+  rocketmq-broker:
+    image: apache/rocketmq:5.3.2
+    container_name: rocketmq-broker
+    depends_on:
+      - rocketmq-namesrv
+    command: sh mqbroker -n rocketmq-namesrv:9876 -c /home/rocketmq/conf/broker.conf
+    ports:
+      - "10909:10909"
+      - "10911:10911"
+      - "10912:10912"
+    volumes:
+      - ./rocketmq/broker.conf:/home/rocketmq/conf/broker.conf:ro
+      - ./data/rocketmq/broker/logs:/home/rocketmq/logs
+      - ./data/rocketmq/broker/store:/home/rocketmq/store
+    networks:
+      - rocketmq
+
+  rocketmq-dashboard:
+    image: apacherocketmq/rocketmq-dashboard:latest
+    container_name: rocketmq-dashboard
+    depends_on:
+      - rocketmq-namesrv
+    environment:
+      JAVA_OPTS: -Drocketmq.namesrv.addr=rocketmq-namesrv:9876
+    ports:
+      - "8082:8082"
+    networks:
+      - rocketmq
+volumes:
+  pgvector_data:
+networks:
+  rocketmq:
+    driver: bridge

@@ -1,0 +1,11 @@
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    group: like-rag-index-producer
+    send-message-timeout: 3000
+
+rag:
+  mq:
+    enabled: true
+    topic: like-rag-index-topic
+    consumer-group: like-rag-index-consumer

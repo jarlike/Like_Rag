@@ -1,0 +1,126 @@
+{
+  "groups": [
+    {
+      "name": "rag",
+      "type": "cn.like.rag.config.RagProperties",
+      "sourceType": "cn.like.rag.config.RagProperties"
+    },
+    {
+      "name": "rag.mq",
+      "type": "cn.like.rag.config.RagProperties$Mq",
+      "sourceType": "cn.like.rag.config.RagProperties",
+      "sourceMethod": "getMq()"
+    },
+    {
+      "name": "rag.openai",
+      "type": "cn.like.rag.config.RagProperties$OpenAi",
+      "sourceType": "cn.like.rag.config.RagProperties",
+      "sourceMethod": "getOpenai()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "rag.async-index-fallback",
+      "type": "java.lang.Boolean",
+      "sourceType": "cn.like.rag.config.RagProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "rag.chunk-max-tokens",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties",
+      "defaultValue": 420
+    },
+    {
+      "name": "rag.chunk-overlap",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties",
+      "defaultValue": 80
+    },
+    {
+      "name": "rag.chunk-overlap-tokens",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties",
+      "defaultValue": 60
+    },
+    {
+      "name": "rag.chunk-size",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties",
+      "defaultValue": 520
+    },
+    {
+      "name": "rag.embedding-dimension",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties",
+      "defaultValue": 384
+    },
+    {
+      "name": "rag.mq.consumer-group",
+      "type": "java.lang.String",
+      "sourceType": "cn.like.rag.config.RagProperties$Mq",
+      "defaultValue": "like-rag-index-consumer"
+    },
+    {
+      "name": "rag.mq.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "cn.like.rag.config.RagProperties$Mq",
+      "defaultValue": true
+    },
+    {
+      "name": "rag.mq.topic",
+      "type": "java.lang.String",
+      "sourceType": "cn.like.rag.config.RagProperties$Mq",
+      "defaultValue": "like-rag-index-topic"
+    },
+    {
+      "name": "rag.openai.api-key",
+      "type": "java.lang.String",
+      "sourceType": "cn.like.rag.config.RagProperties$OpenAi",
+      "defaultValue": ""
+    },
+    {
+      "name": "rag.openai.base-url",
+      "type": "java.lang.String",
+      "sourceType": "cn.like.rag.config.RagProperties$OpenAi",
+      "defaultValue": "https:\/\/api.openai.com\/v1"
+    },
+    {
+      "name": "rag.openai.chat-model",
+      "type": "java.lang.String",
+      "sourceType": "cn.like.rag.config.RagProperties$OpenAi",
+      "defaultValue": "gpt-5.5"
+    },
+    {
+      "name": "rag.openai.embedding-dimensions",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$OpenAi",
+      "defaultValue": 384
+    },
+    {
+      "name": "rag.openai.embedding-model",
+      "type": "java.lang.String",
+      "sourceType": "cn.like.rag.config.RagProperties$OpenAi",
+      "defaultValue": "text-embedding-3-small"
+    },
+    {
+      "name": "rag.openai.timeout-seconds",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$OpenAi",
+      "defaultValue": 60
+    },
+    {
+      "name": "rag.storage-root",
+      "type": "java.lang.String",
+      "sourceType": "cn.like.rag.config.RagProperties",
+      "defaultValue": "data\/rag"
+    },
+    {
+      "name": "rag.top-k",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties",
+      "defaultValue": 5
+    }
+  ],
+  "hints": []
+}

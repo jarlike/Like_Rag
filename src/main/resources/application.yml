@@ -1,0 +1,42 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: like-rag
+  datasource:
+    url: jdbc:postgresql://localhost:15432/rag
+    username: rag
+    password: rag123
+    driver-class-name: org.postgresql.Driver
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 60MB
+  thymeleaf:
+    cache: false
+
+rag:
+  storage-root: data/rag
+  chunk-size: 520
+  chunk-overlap: 80
+  chunk-max-tokens: 420
+  chunk-overlap-tokens: 60
+  top-k: 5
+  embedding-dimension: 384
+  async-index-fallback: true
+  openai:
+    api-key: ${OPENAI_API_KEY:}
+    base-url: https://api.openai.com/v1
+    chat-model: gpt-5.5
+    embedding-model: text-embedding-3-small
+    embedding-dimensions: 384
+    timeout-seconds: 60
+  mq:
+    enabled: false
+    topic: like-rag-index-topic
+    consumer-group: like-rag-index-consumer
+
+logging:
+  level:
+    cn.like.rag: info

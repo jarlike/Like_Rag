@@ -1,0 +1,44 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.18)
+
+2026-06-10 16:38:01.837  INFO 6348 --- [           main] cn.like.rag.LikeRagApplication           : Starting LikeRagApplication v1.0.0 using Java 17.0.16 on Legion-Y7000P with PID 6348 (D:\java-project\java-ai\like_rag\target\like-rag-1.0.0.jar started by like in D:\java-project\java-ai\like_rag)
+2026-06-10 16:38:01.840  INFO 6348 --- [           main] cn.like.rag.LikeRagApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-06-10 16:38:03.764  INFO 6348 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2026-06-10 16:38:03.766  INFO 6348 --- [           main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.6].
+2026-06-10 16:38:03.766  INFO 6348 --- [           main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2026-06-10 16:38:03.766  INFO 6348 --- [           main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2026-06-10 16:38:03.770  INFO 6348 --- [           main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.5.0 8 Apr 2025]
+2026-06-10 16:38:03.780  INFO 6348 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-10 16:38:03.781  INFO 6348 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-06-10 16:38:03.857  INFO 6348 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-10 16:38:03.858  INFO 6348 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1968 ms
+2026-06-10 16:38:04.056  INFO 6348 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-10 16:38:04.327  INFO 6348 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-10 16:38:05.712  WARN 6348 --- [           main] o.a.r.s.a.RocketMQAutoConfiguration      : The necessary spring property 'rocketmq.name-server' is not defined, all rockertmq beans creation are skipped!
+2026-06-10 16:38:05.898  WARN 6348 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8083 is already in use
+2026-06-10 16:38:05.900  INFO 6348 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-10 16:38:05.908  INFO 6348 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-10 16:38:05.921  INFO 6348 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-10 16:38:05.945  INFO 6348 --- [           main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-06-10 16:38:06.005 ERROR 6348 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8083 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8083 or configure this application to listen on another port.
+

@@ -1,0 +1,834 @@
+2026-06-10 16:16:37 INFO ColdDataPullRequestHoldService - ColdDataPullRequestHoldService service started
+2026-06-10 16:16:37 INFO ColdDataCgCtrService - ColdDataCgCtrService service started
+2026-06-10 16:16:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:16:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 16:17:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:17:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 5 ms.
+2026-06-10 16:17:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:17:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:17:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:17:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:18:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:18:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:18:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:18:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:18:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:18:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 11 ms.
+2026-06-10 16:19:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:19:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:19:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 16:19:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 4 ms.
+2026-06-10 16:19:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:19:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 5 ms.
+2026-06-10 16:19:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:19:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 4 ms.
+2026-06-10 16:20:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:20:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 5 ms.
+2026-06-10 16:20:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:20:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:20:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:20:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:21:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:21:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:21:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:21:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 16:21:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:21:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:22:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:22:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:22:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 16:22:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 0 ms.
+2026-06-10 16:22:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:22:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:22:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:22:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:23:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:23:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 4 ms.
+2026-06-10 16:23:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:23:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:23:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:23:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 11 ms.
+2026-06-10 16:24:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:24:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:24:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:24:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:24:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:24:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:25:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:25:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 16:25:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 16:25:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 5 ms.
+2026-06-10 16:25:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:25:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:25:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:25:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:26:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:26:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 21 ms.
+2026-06-10 16:26:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:26:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 16:26:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:26:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:27:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:27:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:27:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:27:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 16:27:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:27:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:28:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:28:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:28:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 16:28:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 16:28:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:28:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:28:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:28:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 16:29:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:29:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 16:29:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:29:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 16:29:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:29:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:30:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:30:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:30:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:30:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:30:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:30:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:31:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:31:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 8 ms.
+2026-06-10 16:31:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 16:31:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 16:31:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:31:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:31:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:31:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 5 ms.
+2026-06-10 16:32:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:32:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 15 ms.
+2026-06-10 16:32:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:32:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 16:32:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:32:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 12 ms.
+2026-06-10 16:33:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:33:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:33:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:33:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 16:33:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:33:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:34:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:34:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 26 ms.
+2026-06-10 16:34:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 16:34:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 0 ms.
+2026-06-10 16:34:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:34:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:34:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:34:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:35:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:35:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:35:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:35:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 4 ms.
+2026-06-10 16:35:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:35:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 9 ms.
+2026-06-10 16:36:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:36:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:36:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:36:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:36:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:36:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:37:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:37:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 29 ms.
+2026-06-10 16:37:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 16:37:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 17 ms.
+2026-06-10 16:37:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:37:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:37:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:37:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 16:38:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:38:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 31 ms.
+2026-06-10 16:38:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:38:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:38:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:38:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:39:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:39:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:39:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:39:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:39:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:39:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:40:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:40:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:40:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 16:40:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 16:40:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:40:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:40:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:40:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:41:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:41:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:41:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:41:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 16:41:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:41:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 16:42:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:42:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 5 ms.
+2026-06-10 16:42:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:42:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:42:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:42:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 24 ms.
+2026-06-10 16:43:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:43:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:43:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 16:43:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 16:43:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:43:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:43:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:43:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:44:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:44:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 15 ms.
+2026-06-10 16:44:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:44:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:44:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:44:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 16:45:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:45:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:45:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:45:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:45:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:45:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:46:17 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:46:17 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:46:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 16:46:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 0 ms.
+2026-06-10 16:46:37 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:46:37 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:46:57 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:46:57 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:47:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:47:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:47:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:47:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 16:47:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:47:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 16 ms.
+2026-06-10 16:48:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:48:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:48:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:48:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 16:48:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:48:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 16:49:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:49:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 16:49:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 16:49:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 16:49:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:49:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:49:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:49:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:50:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:50:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 7 ms.
+2026-06-10 16:50:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:50:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:50:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:50:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 16:51:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:51:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:51:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:51:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 4 ms.
+2026-06-10 16:51:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:51:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 6 ms.
+2026-06-10 16:52:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:52:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:52:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 16:52:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 16:52:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:52:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:52:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:52:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:53:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:53:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 4 ms.
+2026-06-10 16:53:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:53:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 16:53:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:53:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:54:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:54:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:54:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:54:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 7 ms.
+2026-06-10 16:54:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:54:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:55:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:55:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:55:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 16:55:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 24 ms.
+2026-06-10 16:55:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:55:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:55:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:55:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:56:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:56:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:56:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:56:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:56:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:56:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 16:57:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:57:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 10 ms.
+2026-06-10 16:57:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:57:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 8 ms.
+2026-06-10 16:57:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:57:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:58:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:58:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:58:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 16:58:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 96 ms.
+2026-06-10 16:58:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:58:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:58:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:58:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 16:59:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:59:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 8 ms.
+2026-06-10 16:59:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:59:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 5 ms.
+2026-06-10 16:59:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 16:59:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 4 ms.
+2026-06-10 17:00:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:00:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:00:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:00:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:00:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:00:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 17:01:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:01:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 17:01:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:01:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 2 ms.
+2026-06-10 17:01:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:01:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:01:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:01:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:02:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:02:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:02:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:02:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:02:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:02:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 15 ms.
+2026-06-10 17:03:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:03:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:03:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:03:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 4 ms.
+2026-06-10 17:03:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:03:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:04:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:04:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:04:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:04:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 17:04:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:04:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 17:04:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:04:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:05:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:05:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:05:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:05:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 17:05:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:05:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 6 ms.
+2026-06-10 17:06:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:06:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:06:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:06:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:06:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:06:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:07:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:07:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:07:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:07:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 17:07:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:07:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 17:07:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:07:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:08:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:08:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:08:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:08:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 9 ms.
+2026-06-10 17:08:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:08:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:09:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:09:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:09:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:09:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:09:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:09:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:10:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:10:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:10:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:10:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 3 ms.
+2026-06-10 17:10:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:10:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:10:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:10:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:11:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:11:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 17:11:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:11:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 5 ms.
+2026-06-10 17:11:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:11:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 6 ms.
+2026-06-10 17:12:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:12:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:12:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:12:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:12:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:12:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:13:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:13:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:13:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:13:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 0 ms.
+2026-06-10 17:13:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:13:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:13:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:13:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:14:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:14:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:14:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:14:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 17:14:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:14:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:15:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:15:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:15:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:15:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:15:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:15:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:16:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:16:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:16:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:16:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 2 ms.
+2026-06-10 17:16:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:16:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 17:16:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:16:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 17:17:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:17:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 17:17:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:17:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:17:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:17:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:18:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:18:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 4 ms.
+2026-06-10 17:18:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:18:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:18:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:18:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:19:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:19:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 9 ms.
+2026-06-10 17:19:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:19:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 17:19:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:19:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 9 ms.
+2026-06-10 17:19:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:19:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:20:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:20:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:20:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:20:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:20:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:20:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:21:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:21:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:21:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:21:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:21:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:21:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:22:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:22:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 17:22:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:22:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 3 ms.
+2026-06-10 17:22:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:22:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 18 ms.
+2026-06-10 17:22:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:22:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 10 ms.
+2026-06-10 17:23:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:23:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:23:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:23:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:23:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:23:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:24:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:24:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:24:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:24:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 4 ms.
+2026-06-10 17:24:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:24:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:25:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:25:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:25:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:25:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 17:25:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:25:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:25:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:25:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:26:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:26:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:26:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:26:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:26:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:26:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:27:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:27:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:27:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:27:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:27:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:27:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:28:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:28:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:28:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:28:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 17:28:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:28:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:28:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:28:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:29:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:29:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:29:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:29:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 7 ms.
+2026-06-10 17:29:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:29:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:30:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:30:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:30:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:30:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 17:30:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:30:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 17:31:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:31:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:31:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:31:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 4 ms.
+2026-06-10 17:31:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:31:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 4 ms.
+2026-06-10 17:31:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:31:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:32:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:32:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 7 ms.
+2026-06-10 17:32:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:32:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:32:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:32:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 17:33:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:33:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:33:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:33:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 17:33:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:33:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:34:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:34:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:34:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:34:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 2 ms.
+2026-06-10 17:34:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:34:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:34:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:34:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:35:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:35:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:35:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:35:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:35:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:35:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:36:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:36:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:36:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:36:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:36:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:36:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:37:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:37:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 17:37:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:37:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 17:37:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:37:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:37:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:37:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:38:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:38:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:38:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:38:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:38:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:38:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:39:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:39:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:39:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:39:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:39:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:39:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:40:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:40:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:40:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:40:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 17:40:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:40:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 17:40:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:40:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 17:41:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:41:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:41:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:41:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:41:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:41:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:42:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:42:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:42:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:42:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 17:42:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:42:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:43:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:43:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:43:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:43:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 17:43:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:43:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 17:43:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:43:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:44:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:44:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:44:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:44:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:44:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:44:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 17:45:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:45:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 17:45:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:45:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:45:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:45:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 17:46:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:46:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:46:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:46:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 3 ms.
+2026-06-10 17:46:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:46:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 17:46:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:46:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:47:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:47:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 10 ms.
+2026-06-10 17:47:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:47:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:47:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:47:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:48:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:48:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:48:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:48:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 17:48:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:48:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:49:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:49:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 17:49:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:49:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 17:49:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:49:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:49:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:49:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 17:50:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:50:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:50:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:50:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:50:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:50:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:51:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:51:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 17:51:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:51:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:51:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:51:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 5 ms.
+2026-06-10 17:52:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:52:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:52:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:52:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 4 ms.
+2026-06-10 17:52:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:52:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 17:52:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:52:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 9 ms.
+2026-06-10 17:53:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:53:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:53:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:53:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 27 ms.
+2026-06-10 17:53:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:53:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:54:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:54:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:54:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:54:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 12 ms.
+2026-06-10 17:54:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:54:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:55:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:55:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 17:55:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:55:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 17:55:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:55:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:55:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:55:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:56:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:56:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:56:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:56:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 4 ms.
+2026-06-10 17:56:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:56:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:57:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:57:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:57:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:57:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 4 ms.
+2026-06-10 17:57:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:57:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 7 ms.
+2026-06-10 17:58:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:58:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:58:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 17:58:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 2 ms.
+2026-06-10 17:58:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:58:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 17:58:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:58:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:59:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:59:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:59:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:59:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 17:59:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 17:59:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 18:00:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:00:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:00:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:00:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:00:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:00:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:01:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:01:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:01:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 18:01:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 18:01:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:01:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:01:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:01:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 18:02:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:02:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:02:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:02:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 18:02:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:02:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 18:03:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:03:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:03:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:03:38 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:03:58 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:03:58 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 18:04:18 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:04:18 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:04:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 18:04:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 18:04:38 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:04:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 18:04:59 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:04:59 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 18:05:19 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:05:19 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 5 ms.
+2026-06-10 18:05:39 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:05:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:05:59 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:05:59 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 18:06:19 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:06:19 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 18:06:39 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:06:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:06:59 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:06:59 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 18:07:19 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:07:19 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 18:07:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 18:07:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 3 ms.
+2026-06-10 18:07:39 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:07:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 18:07:59 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:07:59 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 18:08:19 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:08:19 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 18:08:39 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:08:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 18:08:59 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:08:59 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 18:09:19 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:09:19 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:09:39 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:09:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 18:09:59 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:09:59 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 18:10:19 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:10:19 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 18:10:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 18:10:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 18:10:39 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:10:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:10:59 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:10:59 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 18:11:19 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:11:19 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:11:39 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:11:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 18:11:59 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:11:59 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 18:12:19 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:12:19 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:12:39 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:12:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 18:12:59 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:12:59 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:13:19 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:13:19 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 18:13:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 18:13:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 2 ms.
+2026-06-10 18:13:39 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:13:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:13:59 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:13:59 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 18:14:19 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:14:19 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:14:39 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:14:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 18:14:59 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:14:59 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 18:15:19 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:15:19 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:15:39 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:15:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 18:15:59 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:15:59 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 3 ms.
+2026-06-10 18:16:19 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:16:19 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:16:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 18:16:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 0 ms.
+2026-06-10 18:16:39 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:16:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 18:16:59 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:16:59 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 18:17:19 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:17:19 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:17:39 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:17:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 18:17:59 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:17:59 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:18:19 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:18:19 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 18:18:39 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:18:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:18:59 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:18:59 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 18:19:19 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:19:19 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:19:37 INFO ColdDataCgCtrService - clearDataAcc cgColdThresholdMapRuntime key size: 0
+2026-06-10 18:19:37 INFO ColdDataCgCtrService - [OK] clearTheDataAcc-cost 1 ms.
+2026-06-10 18:19:39 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:19:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:19:59 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:19:59 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 18:20:19 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:20:19 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 5 ms.
+2026-06-10 18:20:39 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:20:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 1 ms.
+2026-06-10 18:20:59 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:20:59 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.
+2026-06-10 18:21:19 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:21:19 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 2 ms.
+2026-06-10 18:21:39 INFO ColdDataPullRequestHoldService - checkColdPullRequest-info-finish, queueSize: 0 successTotal: 0 errorTotal: 0
+2026-06-10 18:21:39 INFO ColdDataPullRequestHoldService - [OK] checkColdDataPullRequest-cost 0 ms.

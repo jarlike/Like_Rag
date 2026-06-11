@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like RAG 控制台</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="app-header">
+    <div>
+        <div class="eyebrow">RAG MVP Console</div>
+        <h1>Like RAG 控制台</h1>
+        <p>上传文档后自动解析、切片、向量化并写入 pgvector；提问时返回答案、引用和召回片段。</p>
+    </div>
+    <div class="header-tools">
+        <label class="api-base">
+            <span>后端 API</span>
+            <input id="apiBaseInput" type="url" placeholder="http://localhost:8091" aria-label="后端 API 地址">
+        </label>
+        <button id="connectBtn" class="secondary" type="button">连接</button>
+        <button id="refreshBtn" class="icon-button" type="button" title="刷新页面数据">刷新</button>
+        <span id="apiState" class="api-state">检查中</span>
+    </div>
+</header>
+
+<main class="workspace">
+    <section class="overview" aria-label="系统概览">
+        <article class="metric">
+            <span>文档总数</span>
+            <strong id="docCount">0</strong>
+        </article>
+        <article class="metric">
+            <span>已索引</span>
+            <strong id="indexedCount">0</strong>
+        </article>
+        <article class="metric">
+            <span>切片总数</span>
+            <strong id="chunkCount">0</strong>
+        </article>
+        <article class="metric">
+            <span>最近状态</span>
+            <strong id="latestStatus">待上传</strong>
+        </article>
+    </section>
+
+    <section class="flow-strip" aria-label="工作流程">
+        <div class="flow-step">
+            <span>1</span>
+            <div>
+                <strong>上传文档</strong>
+                <p>支持 txt、md、pdf、docx</p>
+            </div>
+        </div>
+        <div class="flow-step">
+            <span>2</span>
+            <div>
+                <strong>自动索引</strong>
+                <p>标题/段落切片 + OpenAI embedding</p>
+            </div>
+        </div>
+        <div class="flow-step">
+            <span>3</span>
+            <div>
+                <strong>问答检索</strong>
+                <p>pgvector HNSW 召回并返回引用</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="main-grid">
+        <aside class="column side-column">
+            <section class="panel upload-panel">
+                <div class="panel-head">
+                    <div>
+                        <h2>文档入库</h2>
+                        <p>选择文件后会触发索引任务。</p>
+                    </div>
+                </div>
+                <form id="uploadForm" class="upload-box">
+                    <input id="fileInput" name="file" type="file" accept=".txt,.md,.markdown,.pdf,.docx,text/*,application/pdf">
+                    <button type="submit">上传并索引</button>
+                </form>
+                <div id="uploadState" class="hint">等待选择文件</div>
+            </section>
+
+            <section class="panel documents-panel">
+                <div class="panel-head">
+                    <div>
+                        <h2>文档列表</h2>
+                        <p>查看索引状态，必要时重新索引。</p>
+                    </div>
+                </div>
+                <div id="documents" class="stack-list"></div>
+            </section>
+        </aside>
+
+        <section class="column center-column">
+            <section class="panel chat-panel">
+                <div class="panel-head">
+                    <div>
+                        <h2>基于文档问答</h2>
+                        <p>由 GPT-5.5 生成答案，并保留引用来源。</p>
+                    </div>
+                    <div class="chat-head-tools">
+                        <span class="model-chip">GPT-5.5</span>
+                        <label class="topk-control">
+                            <span>Top K</span>
+                            <input id="topKInput" type="number" min="1" max="12" value="5" aria-label="topK">
+                        </label>
+                    </div>
+                </div>
+                <div id="chatThread" class="chat-thread" aria-live="polite"></div>
+                <div class="chat-composer">
+                    <textarea id="questionInput" rows="5" placeholder="例如：这份文档里关于 RocketMQ 索引流程是怎么设计的？"></textarea>
+                    <div class="action-row">
+                        <button id="askBtn" type="button">发送</button>
+                        <button id="clearBtn" class="secondary" type="button">清空对话</button>
+                    </div>
+                </div>
+                <div class="subsection">
+                    <h3>本轮引用</h3>
+                    <div id="citations" class="stack-list"></div>
+                </div>
+            </section>
+        </section>
+
+        <aside class="column side-column">
+            <section class="panel search-panel">
+                <div class="panel-head">
+                    <div>
+                        <h2>检索调试</h2>
+                        <p>直接查看向量召回的 chunk 和分数。</p>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <input id="searchInput" type="search" placeholder="输入关键词或完整问题">
+                    <button id="searchBtn" type="button">检索</button>
+                </div>
+                <div id="hits" class="stack-list"></div>
+            </section>
+
+            <section class="panel logs-panel">
+                <div class="panel-head">
+                    <div>
+                        <h2>操作日志</h2>
+                        <p>上传、索引、问答和异常会显示在这里。</p>
+                    </div>
+                </div>
+                <div id="logs" class="log-list"></div>
+            </section>
+        </aside>
+    </div>
+</main>
+
+<script src="/debug.js"></script>
+</body>
+</html>
