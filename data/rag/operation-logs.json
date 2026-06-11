@@ -1,5 +1,76 @@
 {
   "logs" : [ {
+    "id" : "6317ecb1-4551-436c-8b46-a0ff05f2900e",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5,
+      "question" : "向量检索典型场景"
+    },
+    "createdAt" : "2026-06-11T17:06:04.6124011"
+  }, {
+    "id" : "3d674950-97e8-4fa7-a245-3df3b3748aa9",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5,
+      "question" : "向量检索是什么意思"
+    },
+    "createdAt" : "2026-06-11T17:05:18.2801414"
+  }, {
+    "id" : "d6ae54f6-c6fc-4421-8a6f-7e873f2f93ca",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "hitCount" : 5,
+      "model" : "gpt-5.5",
+      "provider" : "openai",
+      "question" : "张韶涵是谁"
+    },
+    "createdAt" : "2026-06-11T16:06:57.9707002"
+  }, {
+    "id" : "508dc057-c883-4bd2-b17f-457ccbba220d",
+    "type" : "INDEX_DONE",
+    "message" : "Document indexed",
+    "documentId" : "f791b363-2004-45de-b356-548146287443",
+    "detail" : {
+      "chunkCount" : 1
+    },
+    "createdAt" : "2026-06-11T16:06:40.0757433"
+  }, {
+    "id" : "58b28964-6165-4ce8-992f-6b2598b8963d",
+    "type" : "INDEX_START",
+    "message" : "Start indexing document",
+    "documentId" : "f791b363-2004-45de-b356-548146287443",
+    "detail" : {
+      "rebuild" : false
+    },
+    "createdAt" : "2026-06-11T16:06:40.0208499"
+  }, {
+    "id" : "9cafb52e-ab3d-489f-82da-d04c6845ff65",
+    "type" : "MQ_DISABLED",
+    "message" : "RocketMQ disabled, use local async indexing",
+    "documentId" : "f791b363-2004-45de-b356-548146287443",
+    "detail" : { },
+    "createdAt" : "2026-06-11T16:06:39.9928251"
+  }, {
+    "id" : "dc3ef392-35d7-4774-81a6-f896f9b8927c",
+    "type" : "UPLOAD",
+    "message" : "Document uploaded",
+    "documentId" : "f791b363-2004-45de-b356-548146287443",
+    "detail" : {
+      "size" : 48,
+      "fileName" : "s.txt"
+    },
+    "createdAt" : "2026-06-11T16:06:39.9768135"
+  }, {
     "id" : "10dadba2-631f-4b86-8a19-65161a3d9255",
     "type" : "CHAT",
     "message" : "Question answered",

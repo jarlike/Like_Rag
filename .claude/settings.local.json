@@ -10,7 +10,20 @@
       "Bash(git --no-pager diff -- src/main/java/cn/like/rag/service/Chunker.java src/main/java/cn/like/rag/service/EmbeddingService.java src/main/java/cn/like/rag/service/OpenAiClientService.java src/main/java/cn/like/rag/service/VectorSearchService.java src/test/)",
       "Bash(rm -rf /tmp/cjkcheck)",
       "Bash(mkdir -p /tmp/cjkcheck)",
-      "Bash(/usr/lib/jvm/java-8-openjdk-amd64/bin/javac -d /tmp/cjkcheck src/main/java/cn/like/rag/util/CjkSupport.java)"
+      "Bash(/usr/lib/jvm/java-8-openjdk-amd64/bin/javac -d /tmp/cjkcheck src/main/java/cn/like/rag/util/CjkSupport.java)",
+      "Bash(python3 eval/synth_corpus.py --topics 3 --chunks-per-topic 4 --out /tmp/evaltest)",
+      "Read(//tmp/evaltest/**)",
+      "Bash(python3 eval/synth_corpus.py --out /tmp/evalfull)",
+      "Read(//tmp/evalfull/**)",
+      "Bash(python3 eval/build_index.py --data /tmp/evaltest --fake-embed --reset)",
+      "Bash(docker exec pgvector-db psql -U rag -d rag -tA -c ' *)",
+      "Bash(python3 eval/run_eval.py --fake-embed --data /tmp/evaltest --k 5 10 --topn 50)",
+      "Bash(docker exec *)",
+      "Bash(python3 eval/synth_corpus.py --topics 100 --chunks-per-topic 20 --out eval/data)",
+      "Bash(python3 eval/build_index.py --data eval/data --fake-embed --reset)",
+      "Bash(python3 eval/run_eval.py --data eval/data --fake-embed --k 5 10)",
+      "Bash(python3 -c \"import json; q=json.load\\(open\\('eval/data/qrels.json'\\)\\); v=[len\\(x\\) for x in q.values\\(\\)]; print\\('relevant_per_query: min=%d max=%d avg=%.1f'%\\(min\\(v\\),max\\(v\\),sum\\(v\\)/len\\(v\\)\\)\\)\")",
+      "Bash(python3 eval/run_eval.py --data eval/data --fake-embed --k 5 10 20)"
     ]
   }
 }

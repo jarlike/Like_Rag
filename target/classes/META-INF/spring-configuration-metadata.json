@@ -35,6 +35,11 @@
       "sourceType": "cn.like.rag.config.RagProperties"
     },
     {
+      "name": "rag.context-token-budget",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties"
+    },
+    {
       "name": "rag.dense-top-k",
       "type": "java.lang.Integer",
       "sourceType": "cn.like.rag.config.RagProperties"
@@ -51,6 +56,11 @@
     },
     {
       "name": "rag.final-top-k",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties"
+    },
+    {
+      "name": "rag.max-chunk-context-tokens",
       "type": "java.lang.Integer",
       "sourceType": "cn.like.rag.config.RagProperties"
     },
@@ -123,6 +133,11 @@
       "name": "rag.openai.timeout-seconds",
       "type": "java.lang.Integer",
       "sourceType": "cn.like.rag.config.RagProperties$OpenAi"
+    },
+    {
+      "name": "rag.reserved-prompt-tokens",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties"
     },
     {
       "name": "rag.rrf-k",
