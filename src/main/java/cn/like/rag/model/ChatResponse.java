@@ -6,6 +6,8 @@ public class ChatResponse {
 
     private String question;
     private String answer;
+    private String provider;
+    private String model;
     private List<Citation> citations;
     private List<SearchHit> hits;
 
@@ -23,6 +25,22 @@ public class ChatResponse {
 
     public void setAnswer(String answer) {
         this.answer = answer;
+    }
+
+    public String getProvider() {
+        return provider;
+    }
+
+    public void setProvider(String provider) {
+        this.provider = provider;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public List<Citation> getCitations() {

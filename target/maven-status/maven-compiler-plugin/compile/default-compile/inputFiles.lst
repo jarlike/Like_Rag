@@ -18,6 +18,7 @@ D:\java-project\java-ai\like_rag\src\main\java\cn\like\rag\util\PostgresTextSani
 D:\java-project\java-ai\like_rag\src\main\java\cn\like\rag\config\RagProperties.java
 D:\java-project\java-ai\like_rag\src\main\java\cn\like\rag\model\ChatRequest.java
 D:\java-project\java-ai\like_rag\src\main\java\cn\like\rag\repository\DocumentRepository.java
+D:\java-project\java-ai\like_rag\src\main\java\cn\like\rag\util\CjkSupport.java
 D:\java-project\java-ai\like_rag\src\main\java\cn\like\rag\controller\DocumentController.java
 D:\java-project\java-ai\like_rag\src\main\java\cn\like\rag\model\DocumentStatus.java
 D:\java-project\java-ai\like_rag\src\main\java\cn\like\rag\model\IndexMessage.java

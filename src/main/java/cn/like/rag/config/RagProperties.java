@@ -6,8 +6,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class RagProperties {
 
     private String storageRoot = "data/rag";
-    private int chunkSize = 520;
-    private int chunkOverlap = 80;
     private int chunkMaxTokens = 420;
     private int chunkOverlapTokens = 60;
     private int topK = 5;
@@ -22,22 +20,6 @@ public class RagProperties {
 
     public void setStorageRoot(String storageRoot) {
         this.storageRoot = storageRoot;
-    }
-
-    public int getChunkSize() {
-        return chunkSize;
-    }
-
-    public void setChunkSize(int chunkSize) {
-        this.chunkSize = chunkSize;
-    }
-
-    public int getChunkOverlap() {
-        return chunkOverlap;
-    }
-
-    public void setChunkOverlap(int chunkOverlap) {
-        this.chunkOverlap = chunkOverlap;
     }
 
     public int getChunkMaxTokens() {
@@ -100,8 +82,10 @@ public class RagProperties {
         private String apiKey = "";
         private String baseUrl = "https://api.openai.com/v1";
         private String chatModel = "gpt-5.5";
+        private String chatEndpoint = "chat-completions";
         private String embeddingModel = "text-embedding-3-small";
         private int embeddingDimensions = 384;
+        private boolean embeddingEnabled = false;
         private int timeoutSeconds = 60;
 
         public String getApiKey() {
@@ -128,6 +112,14 @@ public class RagProperties {
             this.chatModel = chatModel;
         }
 
+        public String getChatEndpoint() {
+            return chatEndpoint;
+        }
+
+        public void setChatEndpoint(String chatEndpoint) {
+            this.chatEndpoint = chatEndpoint;
+        }
+
         public String getEmbeddingModel() {
             return embeddingModel;
         }
@@ -142,6 +134,14 @@ public class RagProperties {
 
         public void setEmbeddingDimensions(int embeddingDimensions) {
             this.embeddingDimensions = embeddingDimensions;
+        }
+
+        public boolean isEmbeddingEnabled() {
+            return embeddingEnabled;
+        }
+
+        public void setEmbeddingEnabled(boolean embeddingEnabled) {
+            this.embeddingEnabled = embeddingEnabled;
         }
 
         public int getTimeoutSeconds() {

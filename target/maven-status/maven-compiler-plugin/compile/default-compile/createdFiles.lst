@@ -8,6 +8,7 @@ cn\like\rag\repository\OperationLogRepository$LogSnapshot.class
 cn\like\rag\model\IndexMessage.class
 cn\like\rag\config\RagProperties$OpenAi.class
 cn\like\rag\controller\ChatController.class
+cn\like\rag\util\CjkSupport.class
 cn\like\rag\service\Chunker$MutableChunk.class
 cn\like\rag\model\RagOperationLog.class
 cn\like\rag\model\RagDocument.class

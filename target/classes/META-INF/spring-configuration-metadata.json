@@ -22,104 +22,87 @@
     {
       "name": "rag.async-index-fallback",
       "type": "java.lang.Boolean",
-      "sourceType": "cn.like.rag.config.RagProperties",
-      "defaultValue": true
+      "sourceType": "cn.like.rag.config.RagProperties"
     },
     {
       "name": "rag.chunk-max-tokens",
       "type": "java.lang.Integer",
-      "sourceType": "cn.like.rag.config.RagProperties",
-      "defaultValue": 420
-    },
-    {
-      "name": "rag.chunk-overlap",
-      "type": "java.lang.Integer",
-      "sourceType": "cn.like.rag.config.RagProperties",
-      "defaultValue": 80
+      "sourceType": "cn.like.rag.config.RagProperties"
     },
     {
       "name": "rag.chunk-overlap-tokens",
       "type": "java.lang.Integer",
-      "sourceType": "cn.like.rag.config.RagProperties",
-      "defaultValue": 60
-    },
-    {
-      "name": "rag.chunk-size",
-      "type": "java.lang.Integer",
-      "sourceType": "cn.like.rag.config.RagProperties",
-      "defaultValue": 520
+      "sourceType": "cn.like.rag.config.RagProperties"
     },
     {
       "name": "rag.embedding-dimension",
       "type": "java.lang.Integer",
-      "sourceType": "cn.like.rag.config.RagProperties",
-      "defaultValue": 384
+      "sourceType": "cn.like.rag.config.RagProperties"
     },
     {
       "name": "rag.mq.consumer-group",
       "type": "java.lang.String",
-      "sourceType": "cn.like.rag.config.RagProperties$Mq",
-      "defaultValue": "like-rag-index-consumer"
+      "sourceType": "cn.like.rag.config.RagProperties$Mq"
     },
     {
       "name": "rag.mq.enabled",
       "type": "java.lang.Boolean",
-      "sourceType": "cn.like.rag.config.RagProperties$Mq",
-      "defaultValue": true
+      "sourceType": "cn.like.rag.config.RagProperties$Mq"
     },
     {
       "name": "rag.mq.topic",
       "type": "java.lang.String",
-      "sourceType": "cn.like.rag.config.RagProperties$Mq",
-      "defaultValue": "like-rag-index-topic"
+      "sourceType": "cn.like.rag.config.RagProperties$Mq"
     },
     {
       "name": "rag.openai.api-key",
       "type": "java.lang.String",
-      "sourceType": "cn.like.rag.config.RagProperties$OpenAi",
-      "defaultValue": ""
+      "sourceType": "cn.like.rag.config.RagProperties$OpenAi"
     },
     {
       "name": "rag.openai.base-url",
       "type": "java.lang.String",
-      "sourceType": "cn.like.rag.config.RagProperties$OpenAi",
-      "defaultValue": "https:\/\/api.openai.com\/v1"
+      "sourceType": "cn.like.rag.config.RagProperties$OpenAi"
+    },
+    {
+      "name": "rag.openai.chat-endpoint",
+      "type": "java.lang.String",
+      "sourceType": "cn.like.rag.config.RagProperties$OpenAi"
     },
     {
       "name": "rag.openai.chat-model",
       "type": "java.lang.String",
-      "sourceType": "cn.like.rag.config.RagProperties$OpenAi",
-      "defaultValue": "gpt-5.5"
+      "sourceType": "cn.like.rag.config.RagProperties$OpenAi"
     },
     {
       "name": "rag.openai.embedding-dimensions",
       "type": "java.lang.Integer",
-      "sourceType": "cn.like.rag.config.RagProperties$OpenAi",
-      "defaultValue": 384
+      "sourceType": "cn.like.rag.config.RagProperties$OpenAi"
+    },
+    {
+      "name": "rag.openai.embedding-enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "cn.like.rag.config.RagProperties$OpenAi"
     },
     {
       "name": "rag.openai.embedding-model",
       "type": "java.lang.String",
-      "sourceType": "cn.like.rag.config.RagProperties$OpenAi",
-      "defaultValue": "text-embedding-3-small"
+      "sourceType": "cn.like.rag.config.RagProperties$OpenAi"
     },
     {
       "name": "rag.openai.timeout-seconds",
       "type": "java.lang.Integer",
-      "sourceType": "cn.like.rag.config.RagProperties$OpenAi",
-      "defaultValue": 60
+      "sourceType": "cn.like.rag.config.RagProperties$OpenAi"
     },
     {
       "name": "rag.storage-root",
       "type": "java.lang.String",
-      "sourceType": "cn.like.rag.config.RagProperties",
-      "defaultValue": "data\/rag"
+      "sourceType": "cn.like.rag.config.RagProperties"
     },
     {
       "name": "rag.top-k",
       "type": "java.lang.Integer",
-      "sourceType": "cn.like.rag.config.RagProperties",
-      "defaultValue": 5
+      "sourceType": "cn.like.rag.config.RagProperties"
     }
   ],
   "hints": []

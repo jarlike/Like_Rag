@@ -2,11 +2,9 @@ package cn.like.rag.service.mq;
 
 import cn.like.rag.config.RagProperties;
 import cn.like.rag.model.IndexMessage;
-import cn.like.rag.service.IndexingService;
 import cn.like.rag.service.OperationLogService;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -56,8 +54,7 @@ public class IndexTaskPublisher {
         }
     }
 
-    @Async
-    public void fallback(IndexMessage message) {
+    private void fallback(IndexMessage message) {
         indexTaskExecutor.execute(message);
     }
 }

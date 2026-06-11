@@ -1,6 +1,7 @@
 package cn.like.rag.service;
 
 import cn.like.rag.config.RagProperties;
+import cn.like.rag.util.CjkSupport;
 import cn.like.rag.util.PostgresTextSanitizer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,14 +27,24 @@ public class EmbeddingService {
 
     public double[] embed(String text) {
         String cleaned = PostgresTextSanitizer.clean(text);
-        if (openAiClientService.isConfigured()) {
+        double[] vector;
+        if (openAiClientService.isEmbeddingConfigured()) {
             try {
-                return openAiClientService.embed(cleaned);
+                vector = openAiClientService.embed(cleaned);
             } catch (Exception e) {
-                log.warn("OpenAI embedding failed, fallback to local embedding: {}", e.getMessage());
+                log.error("OpenAI embedding failed", e);
+                throw new IllegalStateException("OpenAI embedding failed: " + e.getMessage(), e);
             }
+        } else {
+            vector = localEmbed(cleaned);
         }
-        return localEmbed(cleaned);
+        if (vector.length != dimension) {
+            throw new IllegalStateException(String.format(Locale.ROOT,
+                    "Embedding dimension mismatch: got %d but rag.embedding-dimension=%d. "
+                            + "若启用了 OpenAI，请确保 rag.openai.embedding-dimensions 与 rag.embedding-dimension 一致。",
+                    vector.length, dimension));
+        }
+        return vector;
     }
 
     private double[] localEmbed(String text) {
@@ -60,11 +71,11 @@ public class EmbeddingService {
                 continue;
             }
             flushAscii(tokens, ascii);
-            if (Character.isLetterOrDigit(ch) || isCjk(ch)) {
+            if (Character.isLetterOrDigit(ch) || CjkSupport.isCjk(ch)) {
                 tokens.add(String.valueOf(ch));
                 if (i + 1 < normalized.length()) {
                     char next = normalized.charAt(i + 1);
-                    if (isCjk(ch) && isCjk(next)) {
+                    if (CjkSupport.isCjk(ch) && CjkSupport.isCjk(next)) {
                         tokens.add("" + ch + next);
                     }
                 }
@@ -74,26 +85,8 @@ public class EmbeddingService {
         return tokens;
     }
 
-    public double cosine(double[] left, double[] right) {
-        if (left == null || right == null || left.length != right.length) {
-            return 0;
-        }
-        double dot = 0;
-        for (int i = 0; i < left.length; i++) {
-            dot += left[i] * right[i];
-        }
-        return dot;
-    }
-
     private boolean isAsciiWord(char ch) {
         return (ch >= 'a' && ch <= 'z') || (ch >= '0' && ch <= '9') || ch == '_';
-    }
-
-    private boolean isCjk(char ch) {
-        Character.UnicodeBlock block = Character.UnicodeBlock.of(ch);
-        return block == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS
-                || block == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A
-                || block == Character.UnicodeBlock.CJK_COMPATIBILITY_IDEOGRAPHS;
     }
 
     private void flushAscii(List<String> tokens, StringBuilder ascii) {

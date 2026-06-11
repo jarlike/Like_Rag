@@ -8,6 +8,7 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import java.time.Duration;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class EmbeddingServiceTest {
 
@@ -26,5 +27,23 @@ class EmbeddingServiceTest {
 
         assertThat(sameTopic).hasSizeGreaterThan(0);
         assertThat(otherTopic).hasSize(sameTopic.length);
+    }
+
+    @Test
+    void shouldFailWhenConfiguredOpenAiEmbeddingCannotBeGenerated() {
+        RagProperties properties = new RagProperties();
+        properties.getOpenai().setApiKey("test-key");
+        properties.getOpenai().setBaseUrl("http://127.0.0.1:1/v1");
+        properties.getOpenai().setEmbeddingEnabled(true);
+        properties.getOpenai().setTimeoutSeconds(5);
+        OpenAiClientService openAiClientService = new OpenAiClientService(
+                properties,
+                new RestTemplateBuilder().setConnectTimeout(Duration.ofMillis(200)).setReadTimeout(Duration.ofMillis(200)),
+                new ObjectMapper());
+        EmbeddingService embeddingService = new EmbeddingService(properties, openAiClientService);
+
+        assertThatThrownBy(() -> embeddingService.embed("RocketMQ 索引消息"))
+                .isInstanceOf(IllegalStateException.class)
+                .hasMessageContaining("OpenAI embedding failed");
     }
 }

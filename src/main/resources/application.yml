@@ -18,19 +18,19 @@ spring:
 
 rag:
   storage-root: data/rag
-  chunk-size: 520
-  chunk-overlap: 80
   chunk-max-tokens: 420
   chunk-overlap-tokens: 60
   top-k: 5
   embedding-dimension: 384
   async-index-fallback: true
   openai:
-    api-key: ${OPENAI_API_KEY:}
-    base-url: https://api.openai.com/v1
+    api-key: ${OPENAI_API_KEY:sk-f6c21c55f1f6010912cf6311ee2fad128216dfeec1185d89d9a9b1f0cebafeb4}
+    base-url: http://localhost:8080/v1
     chat-model: gpt-5.5
+    chat-endpoint: chat-completions
     embedding-model: text-embedding-3-small
     embedding-dimensions: 384
+    embedding-enabled: false
     timeout-seconds: 60
   mq:
     enabled: false

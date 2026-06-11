@@ -1,5 +1,257 @@
 {
   "logs" : [ {
+    "id" : "d68404dc-ccc9-4960-8dc8-f4ccb6215f4f",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5,
+      "question" : "卢可"
+    },
+    "createdAt" : "2026-06-11T11:48:27.3514993"
+  }, {
+    "id" : "1ed6d254-c674-49c1-80c7-bd596e904b6b",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5,
+      "question" : "卢可是谁"
+    },
+    "createdAt" : "2026-06-11T11:48:14.0237935"
+  }, {
+    "id" : "65864322-2a4a-42a6-ba81-fd940411691f",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5,
+      "question" : "卢可是谁"
+    },
+    "createdAt" : "2026-06-11T11:48:03.9087094"
+  }, {
+    "id" : "021824ed-a07a-4248-bb31-9813d15bbe41",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5,
+      "question" : "你好"
+    },
+    "createdAt" : "2026-06-11T11:47:46.4191882"
+  }, {
+    "id" : "9a4516a2-6d54-4d11-85c5-57f8090c28cc",
+    "type" : "INDEX_DONE",
+    "message" : "Document indexed",
+    "documentId" : "931470a9-ba50-4645-b9c3-b42aa9bf5368",
+    "detail" : {
+      "chunkCount" : 4
+    },
+    "createdAt" : "2026-06-11T11:47:17.7444596"
+  }, {
+    "id" : "2f640410-dc8c-44fc-8991-27dd4a0142e4",
+    "type" : "INDEX_START",
+    "message" : "Start indexing document",
+    "documentId" : "931470a9-ba50-4645-b9c3-b42aa9bf5368",
+    "detail" : {
+      "rebuild" : true
+    },
+    "createdAt" : "2026-06-11T11:47:17.2705723"
+  }, {
+    "id" : "115684c9-42a9-4afa-85a4-b6654b6adc1b",
+    "type" : "MQ_DISABLED",
+    "message" : "RocketMQ disabled, use local async indexing",
+    "documentId" : "931470a9-ba50-4645-b9c3-b42aa9bf5368",
+    "detail" : { },
+    "createdAt" : "2026-06-11T11:47:17.2525477"
+  }, {
+    "id" : "3b9e45b0-8e62-4e31-90d8-8de693c702b2",
+    "type" : "REINDEX_REQUEST",
+    "message" : "Document reindex requested",
+    "documentId" : "931470a9-ba50-4645-b9c3-b42aa9bf5368",
+    "detail" : {
+      "fileName" : "简历 (5).pdf"
+    },
+    "createdAt" : "2026-06-11T11:47:17.2450153"
+  }, {
+    "id" : "43a8ca2b-59b1-4ebe-96eb-130bd9c43960",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5,
+      "question" : "卢可是谁"
+    },
+    "createdAt" : "2026-06-11T11:46:47.3962169"
+  }, {
+    "id" : "6da54875-6934-42df-b3ea-48c29cc3104b",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5,
+      "question" : "你好"
+    },
+    "createdAt" : "2026-06-11T11:46:36.4852134"
+  }, {
+    "id" : "d23f2bfe-7eec-45ec-b44c-b60ce3556685",
+    "type" : "OPENAI_ANSWER_FAILED",
+    "message" : "OpenAI answer generation failed",
+    "documentId" : null,
+    "detail" : {
+      "error" : "OpenAI request failed: 401 Unauthorized: \"{\"code\":\"INVALID_API_KEY\",\"message\":\"Invalid API key\"}\"",
+      "model" : "gpt-5.5"
+    },
+    "createdAt" : "2026-06-11T11:45:22.2937825"
+  }, {
+    "id" : "fd4f7d08-6866-4e0d-a31b-c88725295b9f",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "provider" : "local",
+      "hitCount" : 5,
+      "question" : "你好"
+    },
+    "createdAt" : "2026-06-11T10:44:31.6707328"
+  }, {
+    "id" : "1f02b8e3-5b95-4acf-9fd8-0dcf6edfed46",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "你好",
+      "hitCount" : 5,
+      "provider" : "local"
+    },
+    "createdAt" : "2026-06-11T10:43:09.985486"
+  }, {
+    "id" : "5eef78b5-6a2a-47f9-9e5b-a0faf6ce5baa",
+    "type" : "INDEX_DONE",
+    "message" : "Document indexed",
+    "documentId" : "931470a9-ba50-4645-b9c3-b42aa9bf5368",
+    "detail" : {
+      "chunkCount" : 4
+    },
+    "createdAt" : "2026-06-11T10:42:24.4647044"
+  }, {
+    "id" : "609819b0-7fef-4a1f-8d82-e6cad5a1e0fe",
+    "type" : "INDEX_START",
+    "message" : "Start indexing document",
+    "documentId" : "931470a9-ba50-4645-b9c3-b42aa9bf5368",
+    "detail" : {
+      "rebuild" : false
+    },
+    "createdAt" : "2026-06-11T10:42:24.3214006"
+  }, {
+    "id" : "0cb4c77d-0f6a-405d-ab26-132821403525",
+    "type" : "MQ_DISABLED",
+    "message" : "RocketMQ disabled, use local async indexing",
+    "documentId" : "931470a9-ba50-4645-b9c3-b42aa9bf5368",
+    "detail" : { },
+    "createdAt" : "2026-06-11T10:42:24.3130443"
+  }, {
+    "id" : "8fc57c04-8bbd-4365-9d83-0203c4d4c570",
+    "type" : "UPLOAD",
+    "message" : "Document uploaded",
+    "documentId" : "931470a9-ba50-4645-b9c3-b42aa9bf5368",
+    "detail" : {
+      "size" : 128578,
+      "fileName" : "简历 (5).pdf"
+    },
+    "createdAt" : "2026-06-11T10:42:24.3090254"
+  }, {
+    "id" : "c8988fac-3b68-423c-bea7-83af29b0aa9f",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "你好",
+      "hitCount" : 5,
+      "provider" : "local"
+    },
+    "createdAt" : "2026-06-11T10:41:24.9768108"
+  }, {
+    "id" : "2ad5d391-4d68-4065-8b71-4b2fb14763fb",
+    "type" : "INDEX_DONE",
+    "message" : "Document indexed",
+    "documentId" : "300771b5-796c-403a-9495-da1c00f837c3",
+    "detail" : {
+      "chunkCount" : 4
+    },
+    "createdAt" : "2026-06-11T10:41:18.0067603"
+  }, {
+    "id" : "d84dbcfc-6cad-4f99-bf45-27aae9ed562a",
+    "type" : "INDEX_START",
+    "message" : "Start indexing document",
+    "documentId" : "300771b5-796c-403a-9495-da1c00f837c3",
+    "detail" : {
+      "rebuild" : true
+    },
+    "createdAt" : "2026-06-11T10:41:17.8730754"
+  }, {
+    "id" : "d5babafc-d6cd-4398-8718-4cbc45d40a87",
+    "type" : "MQ_DISABLED",
+    "message" : "RocketMQ disabled, use local async indexing",
+    "documentId" : "300771b5-796c-403a-9495-da1c00f837c3",
+    "detail" : { },
+    "createdAt" : "2026-06-11T10:41:17.8667018"
+  }, {
+    "id" : "13a7336a-8ce8-4be9-a999-0a013ae71f3c",
+    "type" : "REINDEX_REQUEST",
+    "message" : "Document reindex requested",
+    "documentId" : "300771b5-796c-403a-9495-da1c00f837c3",
+    "detail" : {
+      "fileName" : "简历 (5).pdf"
+    },
+    "createdAt" : "2026-06-11T10:41:17.8626821"
+  }, {
+    "id" : "322c29e0-b2f5-4bb5-afad-0f9078cf482c",
+    "type" : "INDEX_DONE",
+    "message" : "Document indexed",
+    "documentId" : "300771b5-796c-403a-9495-da1c00f837c3",
+    "detail" : {
+      "chunkCount" : 4
+    },
+    "createdAt" : "2026-06-11T10:40:59.3429129"
+  }, {
+    "id" : "bc9fe37b-0ef0-4726-8412-d41a585d8e95",
+    "type" : "INDEX_START",
+    "message" : "Start indexing document",
+    "documentId" : "300771b5-796c-403a-9495-da1c00f837c3",
+    "detail" : {
+      "rebuild" : true
+    },
+    "createdAt" : "2026-06-11T10:40:58.8784562"
+  }, {
+    "id" : "10fdfc36-cf1b-418e-a0a9-3a3cf5ff111b",
+    "type" : "MQ_DISABLED",
+    "message" : "RocketMQ disabled, use local async indexing",
+    "documentId" : "300771b5-796c-403a-9495-da1c00f837c3",
+    "detail" : { },
+    "createdAt" : "2026-06-11T10:40:58.8633943"
+  }, {
+    "id" : "dac11b01-bee4-4ff3-998b-3cf0734666a6",
+    "type" : "REINDEX_REQUEST",
+    "message" : "Document reindex requested",
+    "documentId" : "300771b5-796c-403a-9495-da1c00f837c3",
+    "detail" : {
+      "fileName" : "简历 (5).pdf"
+    },
+    "createdAt" : "2026-06-11T10:40:58.8543866"
+  }, {
     "id" : "63a790f3-87d1-4445-860f-4588503cf33a",
     "type" : "CHAT",
     "message" : "Question answered",

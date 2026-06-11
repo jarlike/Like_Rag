@@ -1,5 +1,7 @@
 package cn.like.rag.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.time.LocalDateTime;
 import java.util.Map;
 
@@ -10,6 +12,7 @@ public class RagChunk {
     private String documentName;
     private int chunkIndex;
     private String text;
+    @JsonIgnore
     private double[] vector;
     private String sectionPath;
     private int tokenCount;

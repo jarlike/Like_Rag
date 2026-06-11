@@ -16,8 +16,10 @@ import org.springframework.web.client.RestTemplate;
 
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 @Service
@@ -44,6 +46,14 @@ public class OpenAiClientService {
         return apiKey != null && !apiKey.isBlank();
     }
 
+    public boolean isEmbeddingConfigured() {
+        return isConfigured() && properties.getOpenai().isEmbeddingEnabled();
+    }
+
+    public String chatModel() {
+        return properties.getOpenai().getChatModel();
+    }
+
     public double[] embed(String text) {
         requireApiKey();
         Map<String, Object> body = new LinkedHashMap<>();
@@ -68,42 +78,68 @@ public class OpenAiClientService {
 
     public String generateAnswer(String question, List<SearchHit> hits) {
         requireApiKey();
-        String system = "You are a precise RAG answer generator.\n"
-                + "Answer only from the provided context.\n"
-                + "If the context is insufficient, say so directly.\n"
-                + "Cite sources with bracket numbers like [1] that match the context blocks.\n"
-                + "Keep the answer concise and in the same language as the question.";
+        List<SearchHit> rankedHits = hits.stream()
+                .sorted(Comparator.comparingDouble(SearchHit::getScore).reversed())
+                .toList();
+
+        String system = "你是一个严格的 RAG 问答生成器。\n"
+                + "只能使用用户提供的 Context 片段作答，不要使用外部知识或自由发挥。\n"
+                + "Context 已按相似度从高到低排列，优先依据靠前且 score 更高的片段。\n"
+                + "如果片段不足以回答，直接说明“检索到的文档片段不足以回答”。\n"
+                + "回答必须和问题使用同一种语言。\n"
+                + "每个关键结论后都要用 [1] 这种编号引用对应片段，编号必须和 Context 匹配。";
 
         StringBuilder user = new StringBuilder();
-        user.append("Question:\n").append(question).append("\n\n");
-        user.append("Context:\n");
-        for (int i = 0; i < hits.size(); i++) {
-            SearchHit hit = hits.get(i);
+        user.append("Question:\n").append(question == null ? "" : question.trim()).append("\n\n");
+        user.append("Context (ranked by semantic similarity, highest first):\n");
+        for (int i = 0; i < rankedHits.size(); i++) {
+            SearchHit hit = rankedHits.get(i);
             user.append("[").append(i + 1).append("] ")
-                    .append(hit.getChunk().getDocumentName())
-                    .append(" / chunk ")
-                    .append(hit.getChunk().getChunkIndex());
+                    .append("score=").append(String.format(Locale.ROOT, "%.4f", hit.getScore()))
+                    .append(" | document=").append(hit.getChunk().getDocumentName())
+                    .append(" | chunk=").append(hit.getChunk().getChunkIndex());
             if (hit.getChunk().getSectionPath() != null && !hit.getChunk().getSectionPath().isBlank()) {
-                user.append(" / ").append(hit.getChunk().getSectionPath());
+                user.append(" | section=").append(hit.getChunk().getSectionPath());
             }
             user.append("\n")
                     .append(hit.getChunk().getText())
                     .append("\n\n");
         }
 
-        Map<String, Object> body = new LinkedHashMap<>();
-        body.put("model", properties.getOpenai().getChatModel());
-        body.put("instructions", system);
-        body.put("input", user.toString());
-        body.put("max_output_tokens", 700);
-        body.put("temperature", 0.2);
-
-        JsonNode root = post("/responses", body);
-        String outputText = extractOutputText(root);
+        String outputText;
+        if (useResponsesEndpoint()) {
+            outputText = generateWithResponses(system, user.toString());
+        } else {
+            outputText = generateWithChatCompletions(system, user.toString());
+        }
         if (outputText.isBlank()) {
             throw new IllegalStateException("OpenAI response does not contain output text");
         }
         return outputText;
+    }
+
+    private String generateWithResponses(String system, String user) {
+        Map<String, Object> body = new LinkedHashMap<>();
+        body.put("model", properties.getOpenai().getChatModel());
+        body.put("instructions", system);
+        body.put("input", user);
+        body.put("max_output_tokens", 700);
+
+        JsonNode root = post("/responses", body);
+        return extractResponsesOutputText(root);
+    }
+
+    private String generateWithChatCompletions(String system, String user) {
+        Map<String, Object> body = new LinkedHashMap<>();
+        body.put("model", properties.getOpenai().getChatModel());
+        body.put("messages", List.of(
+                Map.of("role", "system", "content", system),
+                Map.of("role", "user", "content", user)
+        ));
+        body.put("max_tokens", 700);
+
+        JsonNode root = post("/chat/completions", body);
+        return extractChatCompletionsOutputText(root);
     }
 
     private JsonNode post(String path, Map<String, Object> body) {
@@ -128,7 +164,7 @@ public class OpenAiClientService {
         }
     }
 
-    private String extractOutputText(JsonNode root) {
+    private String extractResponsesOutputText(JsonNode root) {
         JsonNode outputText = root.path("output_text");
         if (outputText.isTextual()) {
             return outputText.asText().trim();
@@ -151,6 +187,34 @@ public class OpenAiClientService {
             }
         }
         return String.join("\n", parts).trim();
+    }
+
+    private String extractChatCompletionsOutputText(JsonNode root) {
+        JsonNode choices = root.path("choices");
+        if (!choices.isArray() || choices.isEmpty()) {
+            return "";
+        }
+        JsonNode messageContent = choices.path(0).path("message").path("content");
+        if (messageContent.isTextual()) {
+            return messageContent.asText().trim();
+        }
+        if (!messageContent.isArray()) {
+            return "";
+        }
+
+        List<String> parts = new ArrayList<>();
+        for (JsonNode contentItem : messageContent) {
+            JsonNode text = contentItem.path("text");
+            if (text.isTextual()) {
+                parts.add(text.asText());
+            }
+        }
+        return String.join("\n", parts).trim();
+    }
+
+    private boolean useResponsesEndpoint() {
+        String endpoint = properties.getOpenai().getChatEndpoint();
+        return endpoint != null && "responses".equalsIgnoreCase(endpoint.trim());
     }
 
     private void requireApiKey() {

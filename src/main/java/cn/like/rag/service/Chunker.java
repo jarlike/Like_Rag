@@ -1,6 +1,7 @@
 package cn.like.rag.service;
 
 import cn.like.rag.config.RagProperties;
+import cn.like.rag.util.CjkSupport;
 import cn.like.rag.util.PostgresTextSanitizer;
 import org.springframework.stereotype.Component;
 
@@ -13,8 +14,10 @@ import java.util.regex.Pattern;
 public class Chunker {
 
     private static final Pattern MARKDOWN_HEADING = Pattern.compile("^(#{1,6})\\s+(.+)$");
-    private static final Pattern NUMBERED_HEADING = Pattern.compile("^((\\d+\\.)+\\d*|\\d+)[\\s.、]+.{1,80}$");
+    private static final Pattern NUMBERED_HEADING = Pattern.compile("^((\\d+\\.)+\\d*|\\d+)[\\s.、]+\\S.{0,80}$");
     private static final Pattern CHINESE_HEADING = Pattern.compile("^第[一二三四五六七八九十百千万0-9]+[章节篇部分].{0,80}$");
+    private static final Pattern HTML_HEADING = Pattern.compile("(?is)<\\s*h([1-6])[^>]*>(.*?)</\\s*h\\1\\s*>");
+    private static final Pattern HTML_TAG = Pattern.compile("<[^>]+>");
 
     private final RagProperties properties;
 
@@ -34,7 +37,7 @@ public class Chunker {
             return List.of();
         }
 
-        int maxTokens = Math.max(80, properties.getChunkMaxTokens());
+        int maxTokens = Math.max(8, properties.getChunkMaxTokens());
         int overlapTokens = Math.max(0, Math.min(properties.getChunkOverlapTokens(), maxTokens / 3));
         List<Block> blocks = toBlocks(normalized);
         List<ChunkDraft> chunks = new ArrayList<>();
@@ -45,8 +48,6 @@ public class Chunker {
             if (block.heading()) {
                 flush(chunks, current);
                 applyHeading(headingStack, block);
-                current.setSectionPath(sectionPath(headingStack));
-                current.add(block.text(), estimateTokens(block.text()));
                 continue;
             }
 
@@ -76,11 +77,36 @@ public class Chunker {
         if (cleaned == null) {
             return "";
         }
-        return cleaned.replace("\r\n", "\n")
+        String normalized = convertHtmlHeadings(cleaned)
+                .replace("\r\n", "\n")
                 .replace('\r', '\n')
+                .replaceAll("(?i)<\\s*br\\s*/?\\s*>", "\n")
+                .replaceAll("(?i)</\\s*(p|div|section|article|header|footer|li|h[1-6]|tr)\\s*>", "\n")
+                .replaceAll("(?i)<\\s*(p|div|section|article|header|footer|li|h[1-6]|tr)[^>]*>", "\n")
+                .replaceAll("(?i)</\\s*(td|th)\\s*>", " ")
+                .replaceAll("(?i)<\\s*(td|th)[^>]*>", " ")
+                .replaceAll("&nbsp;", " ")
+                .replaceAll("&lt;", "<")
+                .replaceAll("&gt;", ">")
+                .replaceAll("&amp;", "&");
+        normalized = HTML_TAG.matcher(normalized).replaceAll(" ");
+        return normalized
                 .replaceAll("[ \\t]+", " ")
                 .replaceAll("\\n{3,}", "\n\n")
                 .trim();
+    }
+
+    private String convertHtmlHeadings(String text) {
+        Matcher matcher = HTML_HEADING.matcher(text);
+        StringBuffer buffer = new StringBuffer();
+        while (matcher.find()) {
+            int level = Integer.parseInt(matcher.group(1));
+            String headingText = HTML_TAG.matcher(matcher.group(2)).replaceAll(" ").trim();
+            String replacement = "\n" + "#".repeat(level) + " " + headingText + "\n";
+            matcher.appendReplacement(buffer, Matcher.quoteReplacement(replacement));
+        }
+        matcher.appendTail(buffer);
+        return buffer.toString();
     }
 
     private List<Block> toBlocks(String content) {
@@ -125,6 +151,10 @@ public class Chunker {
     private boolean isHeading(String line) {
         String trimmed = line.trim();
         if (trimmed.length() > 120) {
+            return false;
+        }
+        if (!MARKDOWN_HEADING.matcher(trimmed).matches()
+                && trimmed.matches(".*[。！？!?，,；;].*")) {
             return false;
         }
         return MARKDOWN_HEADING.matcher(trimmed).matches()
@@ -182,7 +212,7 @@ public class Chunker {
 
         List<String> parts = new ArrayList<>();
         MutableChunk current = new MutableChunk();
-        for (String sentence : splitSentences(block)) {
+        for (String sentence : splitSentenceLikeUnits(block)) {
             int sentenceTokens = estimateTokens(sentence);
             if (sentenceTokens > maxTokens) {
                 flushText(parts, current);
@@ -198,9 +228,24 @@ public class Chunker {
         return parts;
     }
 
-    private List<String> splitSentences(String text) {
+    private List<String> splitSentenceLikeUnits(String text) {
         String normalized = text == null ? "" : text.replace('\n', ' ');
-        String[] candidates = normalized.split("(?<=[。！？!?\\.])\\s*");
+        List<String> units = new ArrayList<>();
+        StringBuilder current = new StringBuilder();
+        for (int i = 0; i < normalized.length(); i++) {
+            char ch = normalized.charAt(i);
+            current.append(ch);
+            if (isSentenceBoundary(ch)) {
+                addUnit(units, current);
+            }
+        }
+        addUnit(units, current);
+        return units;
+    }
+
+    private List<String> splitSentences(String text) {
+        String normalized = text == null ? "" : text;
+        String[] candidates = normalized.split("(?<=[。！？!?\\.])\\s+|\\n+");
         List<String> sentences = new ArrayList<>();
         for (String candidate : candidates) {
             String sentence = candidate.trim();
@@ -218,14 +263,30 @@ public class Chunker {
         List<String> parts = new ArrayList<>();
         StringBuilder current = new StringBuilder();
         int tokens = 0;
+        int lastSoftBreak = -1;
+        int tokensAtSoftBreak = 0;
         for (int i = 0; i < text.length(); i++) {
             char ch = text.charAt(i);
             current.append(ch);
             tokens += estimateCharTokens(ch);
+            if (isSoftBoundary(ch)) {
+                lastSoftBreak = current.length();
+                tokensAtSoftBreak = tokens;
+            }
             if (tokens >= maxTokens) {
-                parts.add(current.toString().trim());
-                current.setLength(0);
-                tokens = 0;
+                if (lastSoftBreak > 0 && current.length() - lastSoftBreak < Math.min(80, maxTokens)) {
+                    parts.add(current.substring(0, lastSoftBreak).trim());
+                    String remainder = current.substring(lastSoftBreak).trim();
+                    current.setLength(0);
+                    current.append(remainder);
+                    tokens = Math.max(0, tokens - tokensAtSoftBreak);
+                } else {
+                    parts.add(current.toString().trim());
+                    current.setLength(0);
+                    tokens = 0;
+                }
+                lastSoftBreak = -1;
+                tokensAtSoftBreak = 0;
             }
         }
         if (!current.toString().isBlank()) {
@@ -284,7 +345,7 @@ public class Chunker {
         if (Character.isWhitespace(ch)) {
             return 0;
         }
-        if (isCjk(ch)) {
+        if (CjkSupport.isCjk(ch)) {
             return 1;
         }
         if (Character.isLetterOrDigit(ch)) {
@@ -298,14 +359,6 @@ public class Chunker {
                 || (ch >= 'A' && ch <= 'Z')
                 || (ch >= '0' && ch <= '9')
                 || ch == '_';
-    }
-
-    private boolean isCjk(char ch) {
-        Character.UnicodeBlock block = Character.UnicodeBlock.of(ch);
-        return block == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS
-                || block == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A
-                || block == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B
-                || block == Character.UnicodeBlock.CJK_COMPATIBILITY_IDEOGRAPHS;
     }
 
     private void flush(List<ChunkDraft> chunks, MutableChunk current) {
@@ -347,9 +400,7 @@ public class Chunker {
         }
 
         void setSectionPath(String sectionPath) {
-            if (this.sectionPath == null || this.sectionPath.isBlank()) {
-                this.sectionPath = sectionPath == null ? "" : sectionPath;
-            }
+            this.sectionPath = sectionPath == null ? "" : sectionPath;
         }
 
         String sectionPath() {
@@ -373,5 +424,32 @@ public class Chunker {
             sectionPath = "";
             tokenCount = 0;
         }
+    }
+
+    private boolean isSentenceBoundary(char ch) {
+        return ch == '。'
+                || ch == '！'
+                || ch == '？'
+                || ch == '!'
+                || ch == '?'
+                || ch == '.';
+    }
+
+    private boolean isSoftBoundary(char ch) {
+        return Character.isWhitespace(ch)
+                || ch == '，'
+                || ch == ','
+                || ch == '；'
+                || ch == ';'
+                || ch == '、'
+                || isSentenceBoundary(ch);
+    }
+
+    private void addUnit(List<String> units, StringBuilder current) {
+        String unit = current.toString().trim();
+        if (!unit.isBlank()) {
+            units.add(unit);
+        }
+        current.setLength(0);
     }
 }

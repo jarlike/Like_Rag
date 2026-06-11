@@ -12,6 +12,7 @@ let apiBase = localStorage.getItem(storageKey) || "";
 
 let chatMessages = [];
 let isSending = false;
+let activeChatModel = "GPT-5.5";
 
 async function request(url, options = {}) {
     const target = apiBase ? `${apiBase.replace(/\/$/, "")}${url}` : url;
@@ -105,7 +106,8 @@ function renderChatThread() {
 
 function renderChatMessage(message) {
     const role = message.role || "assistant";
-    const roleLabel = role === "user" ? "你" : role === "system" ? "系统" : "GPT-5.5";
+    const model = message.model || activeChatModel;
+    const roleLabel = role === "user" ? "你" : role === "system" ? "系统" : model;
     const roleTitle = role === "user" ? "用户" : role === "system" ? "系统" : "助手";
     const state = message.status || "";
     const timestamp = fmtTime(message.createdAt);
@@ -118,6 +120,9 @@ function renderChatMessage(message) {
     }
     if (role === "assistant" && citationCount > 0) {
         pills.push(`<span class="message-pill">${citationCount} 条引用</span>`);
+    }
+    if (role === "assistant" && message.provider) {
+        pills.push(`<span class="message-pill model">${escapeHtml(message.provider)} · ${escapeHtml(model)}</span>`);
     }
     if (state === "pending") {
         pills.push(`<span class="message-pill pending">生成中</span>`);
@@ -268,6 +273,10 @@ async function ask() {
             body: JSON.stringify({question, topK})
         });
         assistantMessage.status = "done";
+        assistantMessage.provider = response.provider || "openai";
+        assistantMessage.model = response.model || activeChatModel;
+        activeChatModel = assistantMessage.model;
+        el("activeModelChip").textContent = activeChatModel;
         assistantMessage.content = response.answer || "未返回答案。";
         assistantMessage.citations = Array.isArray(response.citations) ? response.citations : [];
         assistantMessage.citationCount = assistantMessage.citations.length;

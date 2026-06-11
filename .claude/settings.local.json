@@ -1,7 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "Bash(mvn -version)"
+      "Bash(mvn -version)",
+      "Bash(mvn -q test)",
+      "Bash(/usr/bin/javac -version)",
+      "Bash(git config *)",
+      "Bash(git --no-pager diff -- src/main/java/cn/like/rag/service/AnswerService.java)",
+      "Bash(git --no-pager diff --stat -- src/)",
+      "Bash(git --no-pager diff -- src/main/java/cn/like/rag/service/Chunker.java src/main/java/cn/like/rag/service/EmbeddingService.java src/main/java/cn/like/rag/service/OpenAiClientService.java src/main/java/cn/like/rag/service/VectorSearchService.java src/test/)",
+      "Bash(rm -rf /tmp/cjkcheck)",
+      "Bash(mkdir -p /tmp/cjkcheck)",
+      "Bash(/usr/lib/jvm/java-8-openjdk-amd64/bin/javac -d /tmp/cjkcheck src/main/java/cn/like/rag/util/CjkSupport.java)"
     ]
   }
 }
