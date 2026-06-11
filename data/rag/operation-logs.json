@@ -1,5 +1,220 @@
 {
   "logs" : [ {
+    "id" : "1834123a-3ec9-4a3c-a8ae-45a3963b47ef",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "卢可做过什么事情",
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 8
+    },
+    "createdAt" : "2026-06-11T13:46:22.8982025"
+  }, {
+    "id" : "3ea1bbc7-ee0b-44b6-a310-c964dca5401a",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "卢可做过什么事情",
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5
+    },
+    "createdAt" : "2026-06-11T13:45:45.006465"
+  }, {
+    "id" : "a1b2f9b0-ac81-4bac-bb4c-b7bdf83ec9ed",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "卢可在哪里实习过",
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5
+    },
+    "createdAt" : "2026-06-11T13:41:04.4777367"
+  }, {
+    "id" : "ee94e149-1772-4f1c-a78d-2274230b4e82",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "卢可获得了哪些荣誉",
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5
+    },
+    "createdAt" : "2026-06-11T13:40:44.4821267"
+  }, {
+    "id" : "cb7c6a9a-37a2-49c0-af7a-fc34a7c64b0e",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "卢可是谁",
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5
+    },
+    "createdAt" : "2026-06-11T13:40:18.8146272"
+  }, {
+    "id" : "40e18af1-2623-4af6-8c49-29ecef52d61f",
+    "type" : "INDEX_DONE",
+    "message" : "Document indexed",
+    "documentId" : "08386359-05d6-42f0-9d88-c3e4e6b8181c",
+    "detail" : {
+      "chunkCount" : 7
+    },
+    "createdAt" : "2026-06-11T13:39:56.8315038"
+  }, {
+    "id" : "b7c07fc1-0a14-4431-ba6c-9397df2d8755",
+    "type" : "INDEX_START",
+    "message" : "Start indexing document",
+    "documentId" : "08386359-05d6-42f0-9d88-c3e4e6b8181c",
+    "detail" : {
+      "rebuild" : false
+    },
+    "createdAt" : "2026-06-11T13:39:56.753057"
+  }, {
+    "id" : "e8248893-1ef4-44da-a462-754959592d12",
+    "type" : "MQ_DISABLED",
+    "message" : "RocketMQ disabled, use local async indexing",
+    "documentId" : "08386359-05d6-42f0-9d88-c3e4e6b8181c",
+    "detail" : { },
+    "createdAt" : "2026-06-11T13:39:56.7412635"
+  }, {
+    "id" : "9812a39c-5211-494b-bcdf-9ad4e63eabe5",
+    "type" : "UPLOAD",
+    "message" : "Document uploaded",
+    "documentId" : "08386359-05d6-42f0-9d88-c3e4e6b8181c",
+    "detail" : {
+      "fileName" : "s.txt",
+      "size" : 5482
+    },
+    "createdAt" : "2026-06-11T13:39:56.7382763"
+  }, {
+    "id" : "e45ea915-12c5-4a3e-a3b3-f80ecf5f52bf",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "卢可是谁",
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5
+    },
+    "createdAt" : "2026-06-11T13:39:56.6776433"
+  }, {
+    "id" : "2130df68-bc84-4713-ad6f-819b36347dab",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5,
+      "question" : "卢可是谁"
+    },
+    "createdAt" : "2026-06-11T13:33:51.668349"
+  }, {
+    "id" : "ce1fc6e0-ca39-477e-9c7e-9aa2f2284a44",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5,
+      "question" : "卢可是谁"
+    },
+    "createdAt" : "2026-06-11T13:33:25.3599196"
+  }, {
+    "id" : "d66e1ff6-9a6a-4264-9674-037bbecfbe37",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5,
+      "question" : "卢可是谁"
+    },
+    "createdAt" : "2026-06-11T13:33:15.1064788"
+  }, {
+    "id" : "846bf1f3-707a-451c-8186-9a08aba89253",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5,
+      "question" : "卢可是"
+    },
+    "createdAt" : "2026-06-11T13:32:26.0850344"
+  }, {
+    "id" : "376955dd-7b7c-4aab-a515-00ff0639bd0b",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5,
+      "question" : "卢可是"
+    },
+    "createdAt" : "2026-06-11T13:31:10.1037894"
+  }, {
+    "id" : "0b4d409c-a097-4224-a1a5-76645077757a",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "简历",
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5
+    },
+    "createdAt" : "2026-06-11T13:28:16.4417954"
+  }, {
+    "id" : "a49c2a5b-56b2-4268-92e1-9f5571296403",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "手机",
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5
+    },
+    "createdAt" : "2026-06-11T13:27:52.7973795"
+  }, {
+    "id" : "1073466c-af93-4e2c-88b8-2ebc46990dc6",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "手机",
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5
+    },
+    "createdAt" : "2026-06-11T13:27:41.1620196"
+  }, {
+    "id" : "059f5803-1b43-4f5b-ad7f-2520a272bceb",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "卢可是",
+      "provider" : "openai",
+      "model" : "gpt-5.5",
+      "hitCount" : 5
+    },
+    "createdAt" : "2026-06-11T13:27:32.8076508"
+  }, {
     "id" : "d68404dc-ccc9-4960-8dc8-f4ccb6215f4f",
     "type" : "CHAT",
     "message" : "Question answered",

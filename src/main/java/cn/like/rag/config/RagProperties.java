@@ -11,7 +11,7 @@ public class RagProperties {
     private int topK = 5;
     private int embeddingDimension = 384;
     private boolean asyncIndexFallback = true;
-    private OpenAi openai = new OpenAi();
+    private     OpenAi openai = new OpenAi();
     private Mq mq = new Mq();
 
     public String getStorageRoot() {
@@ -80,7 +80,7 @@ public class RagProperties {
 
     public static class OpenAi {
         private String apiKey = "";
-        private String baseUrl = "https://api.openai.com/v1";
+        private String baseUrl = "http://localhost:8080/v1";
         private String chatModel = "gpt-5.5";
         private String chatEndpoint = "chat-completions";
         private String embeddingModel = "text-embedding-3-small";
