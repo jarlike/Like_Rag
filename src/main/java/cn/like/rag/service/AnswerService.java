@@ -10,15 +10,17 @@ import java.util.Map;
 @Service
 public class AnswerService {
 
-    private final VectorSearchService vectorSearchService;
+    private final HybridSearchService hybridSearchService;
+    private final ContextCompressor contextCompressor;
     private final OpenAiClientService openAiClientService;
     private final OperationLogService operationLogService;
 
-    public AnswerService(VectorSearchService vectorSearchService,
-                         EmbeddingService embeddingService,
+    public AnswerService(HybridSearchService hybridSearchService,
+                         ContextCompressor contextCompressor,
                          OpenAiClientService openAiClientService,
                          OperationLogService operationLogService) {
-        this.vectorSearchService = vectorSearchService;
+        this.hybridSearchService = hybridSearchService;
+        this.contextCompressor = contextCompressor;
         this.openAiClientService = openAiClientService;
         this.operationLogService = operationLogService;
     }
@@ -28,7 +30,8 @@ public class AnswerService {
             throw new IllegalStateException("OPENAI_API_KEY is not configured, cannot call GPT-5.5");
         }
 
-        List<SearchHit> hits = vectorSearchService.search(question, topK);
+        List<SearchHit> hits = hybridSearchService.search(question, topK);
+        hits = contextCompressor.compress(question, hits);
         ChatResponse response = new ChatResponse();
         response.setQuestion(question);
         response.setProvider("openai");

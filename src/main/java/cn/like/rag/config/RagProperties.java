@@ -9,6 +9,15 @@ public class RagProperties {
     private int chunkMaxTokens = 420;
     private int chunkOverlapTokens = 60;
     private int topK = 5;
+    private int sparseTopK = 50;
+    private int denseTopK = 50;
+    private int finalTopK = 10;
+    private int rrfK = 60;
+    private double mmrLambda = 0.7;
+    private double duplicateThreshold = 0.92;
+    private int contextTokenBudget = 6000;
+    private int reservedPromptTokens = 800;
+    private int maxChunkContextTokens = 800;
     private int embeddingDimension = 384;
     private boolean asyncIndexFallback = true;
     private     OpenAi openai = new OpenAi();
@@ -44,6 +53,78 @@ public class RagProperties {
 
     public void setTopK(int topK) {
         this.topK = topK;
+    }
+
+    public int getSparseTopK() {
+        return sparseTopK;
+    }
+
+    public void setSparseTopK(int sparseTopK) {
+        this.sparseTopK = sparseTopK;
+    }
+
+    public int getDenseTopK() {
+        return denseTopK;
+    }
+
+    public void setDenseTopK(int denseTopK) {
+        this.denseTopK = denseTopK;
+    }
+
+    public int getFinalTopK() {
+        return finalTopK;
+    }
+
+    public void setFinalTopK(int finalTopK) {
+        this.finalTopK = finalTopK;
+    }
+
+    public int getRrfK() {
+        return rrfK;
+    }
+
+    public void setRrfK(int rrfK) {
+        this.rrfK = rrfK;
+    }
+
+    public double getMmrLambda() {
+        return mmrLambda;
+    }
+
+    public void setMmrLambda(double mmrLambda) {
+        this.mmrLambda = mmrLambda;
+    }
+
+    public double getDuplicateThreshold() {
+        return duplicateThreshold;
+    }
+
+    public void setDuplicateThreshold(double duplicateThreshold) {
+        this.duplicateThreshold = duplicateThreshold;
+    }
+
+    public int getContextTokenBudget() {
+        return contextTokenBudget;
+    }
+
+    public void setContextTokenBudget(int contextTokenBudget) {
+        this.contextTokenBudget = contextTokenBudget;
+    }
+
+    public int getReservedPromptTokens() {
+        return reservedPromptTokens;
+    }
+
+    public void setReservedPromptTokens(int reservedPromptTokens) {
+        this.reservedPromptTokens = reservedPromptTokens;
+    }
+
+    public int getMaxChunkContextTokens() {
+        return maxChunkContextTokens;
+    }
+
+    public void setMaxChunkContextTokens(int maxChunkContextTokens) {
+        this.maxChunkContextTokens = maxChunkContextTokens;
     }
 
     public int getEmbeddingDimension() {

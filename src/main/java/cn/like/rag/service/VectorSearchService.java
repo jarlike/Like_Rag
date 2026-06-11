@@ -29,4 +29,16 @@ public class VectorSearchService {
                 .limit(limit)
                 .toList();
     }
+
+    public List<SearchHit> searchSparse(String query, Integer topK) {
+        int limit = topK == null ? properties.getTopK() : Math.max(1, topK);
+        String tsQuery = embeddingService.toTsQuery(query);
+        if (tsQuery.isEmpty()) {
+            return List.of();
+        }
+        return chunkRepository.searchSparse(tsQuery, limit * 4)
+                .stream()
+                .limit(limit)
+                .toList();
+    }
 }

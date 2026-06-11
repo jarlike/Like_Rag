@@ -40,12 +40,13 @@ public class ChunkRepository {
         jdbcTemplate.batchUpdate(
                 "INSERT INTO rag_chunks (" +
                         "id, document_id, document_name, chunk_index, text, embedding, " +
-                        "section_path, token_count, metadata, created_at" +
-                        ") VALUES (?, ?, ?, ?, ?, CAST(? AS vector), ?, ?, CAST(? AS jsonb), ?)",
+                        "section_path, token_count, metadata, created_at, search_text, search_vector" +
+                        ") VALUES (?, ?, ?, ?, ?, CAST(? AS vector), ?, ?, CAST(? AS jsonb), ?, ?, to_tsvector('simple', ?))",
                 new BatchPreparedStatementSetter() {
                     @Override
                     public void setValues(PreparedStatement ps, int i) throws SQLException {
                         RagChunk chunk = newChunks.get(i);
+                        String searchText = PostgresTextSanitizer.clean(chunk.getSearchText());
                         ps.setString(1, PostgresTextSanitizer.clean(chunk.getId()));
                         ps.setString(2, PostgresTextSanitizer.clean(chunk.getDocumentId()));
                         ps.setString(3, PostgresTextSanitizer.clean(chunk.getDocumentName()));
@@ -56,6 +57,8 @@ public class ChunkRepository {
                         ps.setInt(8, chunk.getTokenCount());
                         ps.setString(9, toJson(chunk.getMetadata()));
                         ps.setTimestamp(10, toTimestamp(chunk.getCreatedAt()));
+                        ps.setString(11, searchText);
+                        ps.setString(12, searchText == null ? "" : searchText);
                     }
 
                     @Override
@@ -97,6 +100,28 @@ public class ChunkRepository {
                 (rs, rowNum) -> new SearchHit(chunkRowMapper().mapRow(rs, rowNum), rs.getDouble("score")),
                 vectorLiteral,
                 vectorLiteral,
+                limit);
+    }
+
+    /**
+     * 稀疏（全文）检索：tsQuery 为已构造好的 to_tsquery 表达式（由 service 层用 EmbeddingService.tokenize
+     * 展开并 OR 连接），按 ts_rank_cd 降序返回命中。
+     */
+    public List<SearchHit> searchSparse(String tsQuery, int limit) {
+        if (tsQuery == null || tsQuery.isBlank()) {
+            return List.of();
+        }
+        return jdbcTemplate.query(
+                "SELECT id, document_id, document_name, chunk_index, text, " +
+                        "embedding::text AS embedding, section_path, token_count, " +
+                        "metadata::text AS metadata, created_at, " +
+                        "ts_rank_cd(search_vector, to_tsquery('simple', ?)) AS score " +
+                        "FROM rag_chunks " +
+                        "WHERE search_vector @@ to_tsquery('simple', ?) " +
+                        "ORDER BY score DESC LIMIT ?",
+                (rs, rowNum) -> new SearchHit(chunkRowMapper().mapRow(rs, rowNum), rs.getDouble("score")),
+                tsQuery,
+                tsQuery,
                 limit);
     }
 

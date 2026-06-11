@@ -18,6 +18,8 @@ public class RagChunk {
     private int tokenCount;
     private Map<String, String> metadata;
     private LocalDateTime createdAt;
+    @JsonIgnore
+    private String searchText;
 
     public String getId() {
         return id;
@@ -97,5 +99,13 @@ public class RagChunk {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public String getSearchText() {
+        return searchText;
+    }
+
+    public void setSearchText(String searchText) {
+        this.searchText = searchText;
     }
 }

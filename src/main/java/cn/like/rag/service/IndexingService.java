@@ -82,6 +82,8 @@ public class IndexingService {
                     chunk.setText(text);
                     chunk.setVector(embeddingService.embed(text));
                     chunk.setSectionPath(sectionPath);
+                    chunk.setSearchText(embeddingService.buildSearchText(
+                            text, sectionPath, PostgresTextSanitizer.clean(document.getFileName())));
                     chunk.setTokenCount(draft.tokenCount());
                     chunk.setCreatedAt(now);
                     Map<String, String> metadata = new HashMap<>();

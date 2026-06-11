@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
 
@@ -83,6 +84,38 @@ public class EmbeddingService {
         }
         flushAscii(tokens, ascii);
         return tokens;
+    }
+
+    /**
+     * 将若干字段展开成空格分隔的 token 串，写入 search_text 供 PostgreSQL 全文检索（to_tsvector('simple', ...)）。
+     * 复用 tokenize 的 CJK 单字/双字 + ASCII 词/3-gram 切分，弥补 PG 默认分词对中文的不足。
+     */
+    public String buildSearchText(String... parts) {
+        List<String> tokens = new ArrayList<>();
+        for (String part : parts) {
+            if (part != null && !part.isBlank()) {
+                tokens.addAll(tokenize(part));
+            }
+        }
+        return String.join(" ", tokens);
+    }
+
+    /**
+     * 将查询展开为 OR 连接的 to_tsquery 表达式（与 buildSearchText/tokenize 切分一致），
+     * 并清洗 tsquery 语法字符，避免中文/特殊符号导致解析失败。供稀疏/混合检索构造全文查询。
+     */
+    public String toTsQuery(String query) {
+        if (query == null || query.isBlank()) {
+            return "";
+        }
+        LinkedHashSet<String> terms = new LinkedHashSet<>();
+        for (String token : tokenize(query)) {
+            String cleaned = token.replaceAll("[&|!():*'\\s\\\\]", "");
+            if (!cleaned.isBlank()) {
+                terms.add(cleaned);
+            }
+        }
+        return String.join(" | ", terms);
     }
 
     private boolean isAsciiWord(char ch) {

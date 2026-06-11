@@ -35,8 +35,28 @@
       "sourceType": "cn.like.rag.config.RagProperties"
     },
     {
+      "name": "rag.dense-top-k",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties"
+    },
+    {
+      "name": "rag.duplicate-threshold",
+      "type": "java.lang.Double",
+      "sourceType": "cn.like.rag.config.RagProperties"
+    },
+    {
       "name": "rag.embedding-dimension",
       "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties"
+    },
+    {
+      "name": "rag.final-top-k",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties"
+    },
+    {
+      "name": "rag.mmr-lambda",
+      "type": "java.lang.Double",
       "sourceType": "cn.like.rag.config.RagProperties"
     },
     {
@@ -103,6 +123,16 @@
       "name": "rag.openai.timeout-seconds",
       "type": "java.lang.Integer",
       "sourceType": "cn.like.rag.config.RagProperties$OpenAi"
+    },
+    {
+      "name": "rag.rrf-k",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties"
+    },
+    {
+      "name": "rag.sparse-top-k",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties"
     },
     {
       "name": "rag.storage-root",

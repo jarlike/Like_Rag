@@ -32,3 +32,12 @@ CREATE INDEX IF NOT EXISTS idx_rag_chunks_document_order ON rag_chunks(document_
 CREATE INDEX IF NOT EXISTS idx_rag_chunks_embedding_hnsw
     ON rag_chunks USING hnsw (embedding vector_cosine_ops)
     WITH (m = 16, ef_construction = 64);
+
+-- Hybrid Search 稀疏检索字段与索引（项目书第一阶段）
+ALTER TABLE rag_chunks ADD COLUMN IF NOT EXISTS search_text TEXT;
+ALTER TABLE rag_chunks ADD COLUMN IF NOT EXISTS search_vector tsvector;
+CREATE INDEX IF NOT EXISTS idx_rag_chunks_search_vector_gin
+    ON rag_chunks USING gin(search_vector);
+CREATE EXTENSION IF NOT EXISTS pg_trgm;
+CREATE INDEX IF NOT EXISTS idx_rag_chunks_search_text_trgm
+    ON rag_chunks USING gin(search_text gin_trgm_ops);
