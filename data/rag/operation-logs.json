@@ -1,5 +1,17 @@
 {
   "logs" : [ {
+    "id" : "763f4d47-1d70-4e62-ae4c-fc82851d40b6",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "question" : "卢可做过什么",
+      "hitCount" : 8,
+      "model" : "gpt-5.5",
+      "provider" : "openai"
+    },
+    "createdAt" : "2026-06-11T14:41:40.1296396"
+  }, {
     "id" : "1834123a-3ec9-4a3c-a8ae-45a3963b47ef",
     "type" : "CHAT",
     "message" : "Question answered",

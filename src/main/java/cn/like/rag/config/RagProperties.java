@@ -87,6 +87,8 @@ public class RagProperties {
         private int embeddingDimensions = 384;
         private boolean embeddingEnabled = false;
         private int timeoutSeconds = 60;
+        private int maxRetries = 2;
+        private long retryBackoffMillis = 500;
 
         public String getApiKey() {
             return apiKey;
@@ -150,6 +152,22 @@ public class RagProperties {
 
         public void setTimeoutSeconds(int timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
+        }
+
+        public int getMaxRetries() {
+            return maxRetries;
+        }
+
+        public void setMaxRetries(int maxRetries) {
+            this.maxRetries = maxRetries;
+        }
+
+        public long getRetryBackoffMillis() {
+            return retryBackoffMillis;
+        }
+
+        public void setRetryBackoffMillis(long retryBackoffMillis) {
+            this.retryBackoffMillis = retryBackoffMillis;
         }
     }
 

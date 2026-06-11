@@ -90,6 +90,16 @@
       "sourceType": "cn.like.rag.config.RagProperties$OpenAi"
     },
     {
+      "name": "rag.openai.max-retries",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$OpenAi"
+    },
+    {
+      "name": "rag.openai.retry-backoff-millis",
+      "type": "java.lang.Long",
+      "sourceType": "cn.like.rag.config.RagProperties$OpenAi"
+    },
+    {
       "name": "rag.openai.timeout-seconds",
       "type": "java.lang.Integer",
       "sourceType": "cn.like.rag.config.RagProperties$OpenAi"
