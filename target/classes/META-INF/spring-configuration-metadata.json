@@ -6,19 +6,84 @@
       "sourceType": "cn.like.rag.config.RagProperties"
     },
     {
+      "name": "rag.agent",
+      "type": "cn.like.rag.config.RagProperties$Agent",
+      "sourceType": "cn.like.rag.config.RagProperties",
+      "sourceMethod": "public cn.like.rag.config.RagProperties.Agent getAgent() "
+    },
+    {
+      "name": "rag.conversation",
+      "type": "cn.like.rag.config.RagProperties$Conversation",
+      "sourceType": "cn.like.rag.config.RagProperties",
+      "sourceMethod": "public cn.like.rag.config.RagProperties.Conversation getConversation() "
+    },
+    {
+      "name": "rag.eval",
+      "type": "cn.like.rag.config.RagProperties$Eval",
+      "sourceType": "cn.like.rag.config.RagProperties",
+      "sourceMethod": "public cn.like.rag.config.RagProperties.Eval getEval() "
+    },
+    {
       "name": "rag.mq",
       "type": "cn.like.rag.config.RagProperties$Mq",
       "sourceType": "cn.like.rag.config.RagProperties",
-      "sourceMethod": "getMq()"
+      "sourceMethod": "public cn.like.rag.config.RagProperties.Mq getMq() "
     },
     {
       "name": "rag.openai",
       "type": "cn.like.rag.config.RagProperties$OpenAi",
       "sourceType": "cn.like.rag.config.RagProperties",
-      "sourceMethod": "getOpenai()"
+      "sourceMethod": "public cn.like.rag.config.RagProperties.OpenAi getOpenai() "
+    },
+    {
+      "name": "rag.rerank",
+      "type": "cn.like.rag.config.RagProperties$Rerank",
+      "sourceType": "cn.like.rag.config.RagProperties",
+      "sourceMethod": "public cn.like.rag.config.RagProperties.Rerank getRerank() "
+    },
+    {
+      "name": "rag.sentinel",
+      "type": "cn.like.rag.config.RagProperties$Sentinel",
+      "sourceType": "cn.like.rag.config.RagProperties",
+      "sourceMethod": "public cn.like.rag.config.RagProperties.Sentinel getSentinel() "
     }
   ],
   "properties": [
+    {
+      "name": "rag.agent.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "cn.like.rag.config.RagProperties$Agent"
+    },
+    {
+      "name": "rag.agent.max-react-steps-per-subtask",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$Agent"
+    },
+    {
+      "name": "rag.agent.max-run-millis",
+      "type": "java.lang.Long",
+      "sourceType": "cn.like.rag.config.RagProperties$Agent"
+    },
+    {
+      "name": "rag.agent.max-sub-tasks",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$Agent"
+    },
+    {
+      "name": "rag.agent.max-tool-calls",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$Agent"
+    },
+    {
+      "name": "rag.agent.planning-enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "cn.like.rag.config.RagProperties$Agent"
+    },
+    {
+      "name": "rag.agent.tool-search-top-k",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$Agent"
+    },
     {
       "name": "rag.async-index-fallback",
       "type": "java.lang.Boolean",
@@ -40,6 +105,48 @@
       "sourceType": "cn.like.rag.config.RagProperties"
     },
     {
+      "name": "rag.conversation.enabled",
+      "type": "java.lang.Boolean",
+      "description": "总开关。关闭时每次问答都是独立单轮，sessionId 被忽略。",
+      "sourceType": "cn.like.rag.config.RagProperties$Conversation"
+    },
+    {
+      "name": "rag.conversation.max-history-chars",
+      "type": "java.lang.Integer",
+      "description": "拼入改写\/生成 prompt 的历史文本最大字符数（超出截断，保留最近轮）。",
+      "sourceType": "cn.like.rag.config.RagProperties$Conversation"
+    },
+    {
+      "name": "rag.conversation.max-sessions",
+      "type": "java.lang.Integer",
+      "description": "进程内最多保留的会话数（超出淘汰最久未访问的会话），防止内存无界增长。",
+      "sourceType": "cn.like.rag.config.RagProperties$Conversation"
+    },
+    {
+      "name": "rag.conversation.max-stored-answer-chars",
+      "type": "java.lang.Integer",
+      "description": "单轮回答写入记忆前截断的最大字符数，防止单条记忆过大。",
+      "sourceType": "cn.like.rag.config.RagProperties$Conversation"
+    },
+    {
+      "name": "rag.conversation.max-turns",
+      "type": "java.lang.Integer",
+      "description": "单会话保留的最大历史轮数（超出丢弃最旧轮）。",
+      "sourceType": "cn.like.rag.config.RagProperties$Conversation"
+    },
+    {
+      "name": "rag.conversation.rewrite-enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否基于历史对追问做 query 改写（指代消解），改写失败时回退原问题。",
+      "sourceType": "cn.like.rag.config.RagProperties$Conversation"
+    },
+    {
+      "name": "rag.conversation.session-ttl-seconds",
+      "type": "java.lang.Long",
+      "description": "会话空闲过期时间（秒），超过未访问的会话在下次访问时被清除。",
+      "sourceType": "cn.like.rag.config.RagProperties$Conversation"
+    },
+    {
       "name": "rag.dense-top-k",
       "type": "java.lang.Integer",
       "sourceType": "cn.like.rag.config.RagProperties"
@@ -53,6 +160,36 @@
       "name": "rag.embedding-dimension",
       "type": "java.lang.Integer",
       "sourceType": "cn.like.rag.config.RagProperties"
+    },
+    {
+      "name": "rag.eval.data-dir",
+      "type": "java.lang.String",
+      "sourceType": "cn.like.rag.config.RagProperties$Eval"
+    },
+    {
+      "name": "rag.eval.ks",
+      "type": "java.lang.Integer[]",
+      "sourceType": "cn.like.rag.config.RagProperties$Eval"
+    },
+    {
+      "name": "rag.eval.mrr-gate",
+      "type": "java.lang.Double",
+      "sourceType": "cn.like.rag.config.RagProperties$Eval"
+    },
+    {
+      "name": "rag.eval.ndcg-gate",
+      "type": "java.lang.Double",
+      "sourceType": "cn.like.rag.config.RagProperties$Eval"
+    },
+    {
+      "name": "rag.eval.recall-gate",
+      "type": "java.lang.Double",
+      "sourceType": "cn.like.rag.config.RagProperties$Eval"
+    },
+    {
+      "name": "rag.eval.top-n",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$Eval"
     },
     {
       "name": "rag.final-top-k",
@@ -135,6 +272,30 @@
       "sourceType": "cn.like.rag.config.RagProperties$OpenAi"
     },
     {
+      "name": "rag.rerank.candidate-k",
+      "type": "java.lang.Integer",
+      "description": "送入重排序的候选池大小（从 Hybrid 多取一些再重排，重排后裁剪到 finalTopK）。",
+      "sourceType": "cn.like.rag.config.RagProperties$Rerank"
+    },
+    {
+      "name": "rag.rerank.enabled",
+      "type": "java.lang.Boolean",
+      "description": "总开关。关闭时问答链路完全跳过重排序，等价于旧行为。",
+      "sourceType": "cn.like.rag.config.RagProperties$Rerank"
+    },
+    {
+      "name": "rag.rerank.max-candidate-chars",
+      "type": "java.lang.Integer",
+      "description": "每个候选片段进入重排序 prompt 的最大字符数，控制 token 成本。",
+      "sourceType": "cn.like.rag.config.RagProperties$Rerank"
+    },
+    {
+      "name": "rag.rerank.max-output-tokens",
+      "type": "java.lang.Integer",
+      "description": "重排序 LLM 调用的最大输出 token。",
+      "sourceType": "cn.like.rag.config.RagProperties$Rerank"
+    },
+    {
       "name": "rag.reserved-prompt-tokens",
       "type": "java.lang.Integer",
       "sourceType": "cn.like.rag.config.RagProperties"
@@ -143,6 +304,66 @@
       "name": "rag.rrf-k",
       "type": "java.lang.Integer",
       "sourceType": "cn.like.rag.config.RagProperties"
+    },
+    {
+      "name": "rag.sentinel.chat-qps",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$Sentinel"
+    },
+    {
+      "name": "rag.sentinel.circuit-break-window-seconds",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$Sentinel"
+    },
+    {
+      "name": "rag.sentinel.embedding-max-concurrency",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$Sentinel"
+    },
+    {
+      "name": "rag.sentinel.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "cn.like.rag.config.RagProperties$Sentinel"
+    },
+    {
+      "name": "rag.sentinel.exception-ratio",
+      "type": "java.lang.Double",
+      "sourceType": "cn.like.rag.config.RagProperties$Sentinel"
+    },
+    {
+      "name": "rag.sentinel.hybrid-search-max-concurrency",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$Sentinel"
+    },
+    {
+      "name": "rag.sentinel.llm-max-concurrency",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$Sentinel"
+    },
+    {
+      "name": "rag.sentinel.llm-slow-call-rt-millis",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$Sentinel"
+    },
+    {
+      "name": "rag.sentinel.min-request-amount",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$Sentinel"
+    },
+    {
+      "name": "rag.sentinel.reindex-concurrency",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$Sentinel"
+    },
+    {
+      "name": "rag.sentinel.rerank-max-concurrency",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$Sentinel"
+    },
+    {
+      "name": "rag.sentinel.upload-qps",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.like.rag.config.RagProperties$Sentinel"
     },
     {
       "name": "rag.sparse-top-k",

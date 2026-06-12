@@ -23,7 +23,23 @@
       "Bash(python3 eval/build_index.py --data eval/data --fake-embed --reset)",
       "Bash(python3 eval/run_eval.py --data eval/data --fake-embed --k 5 10)",
       "Bash(python3 -c \"import json; q=json.load\\(open\\('eval/data/qrels.json'\\)\\); v=[len\\(x\\) for x in q.values\\(\\)]; print\\('relevant_per_query: min=%d max=%d avg=%.1f'%\\(min\\(v\\),max\\(v\\),sum\\(v\\)/len\\(v\\)\\)\\)\")",
-      "Bash(python3 eval/run_eval.py --data eval/data --fake-embed --k 5 10 20)"
+      "Bash(python3 eval/run_eval.py --data eval/data --fake-embed --k 5 10 20)",
+      "Bash(JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 timeout 540 mvn -q compile)",
+      "Bash(export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64)",
+      "Read(//usr/lib/jvm/java-21-openjdk-amd64/bin/**)",
+      "Bash(/usr/lib/jvm/java-21-openjdk-amd64/bin/javac -version)",
+      "Bash(mvn -v)",
+      "Bash(apt-cache search *)",
+      "Bash(sudo -n true)",
+      "Bash(apt-get install *)",
+      "Bash(/usr/lib/jvm/java-17-openjdk-amd64/bin/javac -version)",
+      "Bash(export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64)",
+      "Bash(timeout 540 mvn -q compile)",
+      "Bash(echo \"=== COMPILE EXIT $? ===\")",
+      "Bash(timeout 300 mvn -q compile)",
+      "Bash(echo \"=== EXIT $? ===\")",
+      "Bash(printenv OPENAI_API_KEY)",
+      "Bash(printenv OPENAI_BASE_URL)"
     ]
   }
 }

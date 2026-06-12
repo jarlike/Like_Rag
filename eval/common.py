@@ -16,6 +16,7 @@ PG_DB = os.environ.get("PG_DB", "rag")
 OPENAI_BASE_URL = os.environ.get("OPENAI_BASE_URL", "http://localhost:8080/v1")
 EMBED_MODEL = os.environ.get("EMBED_MODEL", "text-embedding-3-small")
 EMBED_DIM = int(os.environ.get("EMBED_DIM", "384"))
+CHAT_MODEL = os.environ.get("CHAT_MODEL", "gpt-5.5")
 
 
 # ---- tokenize：复现 app EmbeddingService.tokenize（CJK 单字/双字 + ASCII 词/3-gram）----
@@ -106,6 +107,39 @@ def embed_texts(texts, retries=4):
                 continue
             raise SystemExit("embedding 请求异常 " + last)
     raise SystemExit("embedding 失败 " + str(last))
+
+
+# ---- chat completion via sub2api（OpenAI 兼容）：供 hybrid+rerank 复用 ----
+def chat_complete(system, user, max_tokens=512, retries=3):
+    if requests is None:
+        raise SystemExit("ERROR: 需要 requests 库")
+    key = os.environ.get("OPENAI_API_KEY")
+    if not key:
+        raise SystemExit("ERROR: 请先设置环境变量 OPENAI_API_KEY（sub2api 的 key）")
+    url = OPENAI_BASE_URL.rstrip("/") + "/chat/completions"
+    headers = {"Authorization": "Bearer " + key, "Content-Type": "application/json"}
+    body = {"model": CHAT_MODEL,
+            "messages": [{"role": "system", "content": system},
+                         {"role": "user", "content": user}],
+            "max_tokens": max_tokens}
+    last = None
+    for attempt in range(retries):
+        try:
+            r = requests.post(url, json=body, headers=headers, timeout=120)
+            if r.status_code == 200:
+                return r.json()["choices"][0]["message"].get("content") or ""
+            last = "%s: %s" % (r.status_code, r.text[:200])
+            if r.status_code in (429, 500, 502, 503, 504) and attempt < retries - 1:
+                time.sleep(0.6 * (2 ** attempt))
+                continue
+            raise SystemExit("chat 失败 " + last)
+        except requests.RequestException as e:
+            last = str(e)
+            if attempt < retries - 1:
+                time.sleep(0.6 * (2 ** attempt))
+                continue
+            raise SystemExit("chat 请求异常 " + last)
+    raise SystemExit("chat 失败 " + str(last))
 
 
 # ---- pgvector via docker exec psql ----

@@ -1,3 +1,6 @@
-D:\java-project\java-ai\like_rag\src\test\java\cn\like\rag\service\EmbeddingServiceTest.java
-D:\java-project\java-ai\like_rag\src\test\java\cn\like\rag\service\AnswerServiceTest.java
-D:\java-project\java-ai\like_rag\src\test\java\cn\like\rag\service\ChunkerTest.java
+/mnt/d/java-project/java-ai/like_rag/src/test/java/cn/like/rag/service/ConversationMemoryServiceTest.java
+/mnt/d/java-project/java-ai/like_rag/src/test/java/cn/like/rag/service/EmbeddingServiceTest.java
+/mnt/d/java-project/java-ai/like_rag/src/test/java/cn/like/rag/service/ChunkerTest.java
+/mnt/d/java-project/java-ai/like_rag/src/test/java/cn/like/rag/eval/RetrievalMetricsTest.java
+/mnt/d/java-project/java-ai/like_rag/src/test/java/cn/like/rag/service/AnswerServiceTest.java
+/mnt/d/java-project/java-ai/like_rag/src/test/java/cn/like/rag/service/RerankServiceTest.java

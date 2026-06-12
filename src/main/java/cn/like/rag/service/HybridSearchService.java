@@ -3,6 +3,8 @@ package cn.like.rag.service;
 import cn.like.rag.config.RagProperties;
 import cn.like.rag.model.SearchHit;
 import cn.like.rag.repository.ChunkRepository;
+import cn.like.rag.sentinel.SentinelGuard;
+import cn.like.rag.sentinel.SentinelResources;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,6 +12,7 @@ import java.util.List;
 /**
  * 混合检索：dense Top-N + sparse Top-N → RRF 融合 → MMR 去重 → Top finalK。
  * 项目书第二阶段核心入口，供问答与调试统一使用。
+ * 入口受 Sentinel {@code service.hybridSearch} 并发隔离保护。
  */
 @Service
 public class HybridSearchService {
@@ -19,20 +22,27 @@ public class HybridSearchService {
     private final RrfFusionService rrfFusionService;
     private final MmrDedupService mmrDedupService;
     private final RagProperties properties;
+    private final SentinelGuard sentinelGuard;
 
     public HybridSearchService(ChunkRepository chunkRepository,
                                EmbeddingService embeddingService,
                                RrfFusionService rrfFusionService,
                                MmrDedupService mmrDedupService,
-                               RagProperties properties) {
+                               RagProperties properties,
+                               SentinelGuard sentinelGuard) {
         this.chunkRepository = chunkRepository;
         this.embeddingService = embeddingService;
         this.rrfFusionService = rrfFusionService;
         this.mmrDedupService = mmrDedupService;
         this.properties = properties;
+        this.sentinelGuard = sentinelGuard;
     }
 
     public List<SearchHit> search(String query, Integer topK) {
+        return sentinelGuard.call(SentinelResources.SERVICE_HYBRID_SEARCH, () -> doSearch(query, topK));
+    }
+
+    private List<SearchHit> doSearch(String query, Integer topK) {
         int finalK = topK == null ? properties.getFinalTopK() : Math.max(1, topK);
 
         double[] queryVector = embeddingService.embed(query);

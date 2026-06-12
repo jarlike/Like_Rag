@@ -1,3 +1,3 @@
-cn\like\rag\service\AnswerServiceTest.class
-cn\like\rag\service\ChunkerTest.class
-cn\like\rag\service\EmbeddingServiceTest.class
+cn/like/rag/eval/RetrievalMetricsTest.class
+cn/like/rag/service/ConversationMemoryServiceTest.class
+cn/like/rag/service/RerankServiceTest.class

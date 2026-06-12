@@ -7,6 +7,8 @@ public class ChatRequest {
     @NotBlank(message = "question is required")
     private String question;
     private Integer topK;
+    /** 多轮对话会话 ID。为空则按独立单轮处理；复用同一 ID 即可延续上下文。 */
+    private String sessionId;
 
     public String getQuestion() {
         return question;
@@ -22,5 +24,13 @@ public class ChatRequest {
 
     public void setTopK(Integer topK) {
         this.topK = topK;
+    }
+
+    public String getSessionId() {
+        return sessionId;
+    }
+
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
     }
 }

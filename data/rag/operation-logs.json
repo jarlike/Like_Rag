@@ -1,5 +1,202 @@
 {
   "logs" : [ {
+    "id" : "c98fc7eb-6128-49df-ba72-c8979328726e",
+    "type" : "SENTINEL_INIT",
+    "message" : "Sentinel 规则已加载",
+    "documentId" : null,
+    "detail" : {
+      "uploadQps" : 1,
+      "chatQps" : 5,
+      "reindexConcurrency" : 1,
+      "embeddingMaxConcurrency" : 4,
+      "hybridSearchMaxConcurrency" : 8,
+      "llmMaxConcurrency" : 3,
+      "rerankMaxConcurrency" : 3,
+      "llmSlowCallRtMillis" : 5000,
+      "exceptionRatio" : 0.3,
+      "circuitBreakWindowSeconds" : 30
+    },
+    "createdAt" : "2026-06-12T12:04:33.5420552"
+  }, {
+    "id" : "bef49f4e-f9d5-496e-bf9e-076688455266",
+    "type" : "OPENAI_ANSWER_FAILED",
+    "message" : "OpenAI answer generation failed",
+    "documentId" : null,
+    "detail" : {
+      "model" : "gpt-5.5",
+      "error" : "OpenAI request failed: 404 Not Found: \"{\"error\":\"当前 API 不支持所选模型 gpt-5.5\",\"type\":\"error\"}\""
+    },
+    "createdAt" : "2026-06-12T11:46:59.3135617"
+  }, {
+    "id" : "e3467cb1-fa6a-4b11-a35e-cae8be9e816a",
+    "type" : "SENTINEL_INIT",
+    "message" : "Sentinel 规则已加载",
+    "documentId" : null,
+    "detail" : {
+      "uploadQps" : 1,
+      "chatQps" : 5,
+      "reindexConcurrency" : 1,
+      "embeddingMaxConcurrency" : 4,
+      "hybridSearchMaxConcurrency" : 8,
+      "llmMaxConcurrency" : 3,
+      "rerankMaxConcurrency" : 3,
+      "llmSlowCallRtMillis" : 5000,
+      "exceptionRatio" : 0.3,
+      "circuitBreakWindowSeconds" : 30
+    },
+    "createdAt" : "2026-06-12T11:46:48.6452465"
+  }, {
+    "id" : "3aa36048-05c1-4d42-9c3b-8112fa4b5621",
+    "type" : "OPENAI_ANSWER_FAILED",
+    "message" : "OpenAI answer generation failed",
+    "documentId" : null,
+    "detail" : {
+      "model" : "gpt-5.5",
+      "error" : "OpenAI request failed: 404 : \"{\"error\":\"当前 API 不支持所选模型 gpt-5.5\",\"type\":\"error\"}\""
+    },
+    "createdAt" : "2026-06-12T11:44:13.5102651"
+  }, {
+    "id" : "c386af3e-6ec0-4742-a59d-3f4653b33c26",
+    "type" : "SENTINEL_INIT",
+    "message" : "Sentinel 规则已加载",
+    "documentId" : null,
+    "detail" : {
+      "uploadQps" : 1,
+      "chatQps" : 5,
+      "reindexConcurrency" : 1,
+      "embeddingMaxConcurrency" : 4,
+      "hybridSearchMaxConcurrency" : 8,
+      "llmMaxConcurrency" : 3,
+      "rerankMaxConcurrency" : 3,
+      "llmSlowCallRtMillis" : 5000,
+      "exceptionRatio" : 0.3,
+      "circuitBreakWindowSeconds" : 30
+    },
+    "createdAt" : "2026-06-12T11:44:03.350882"
+  }, {
+    "id" : "d834a8cd-aad0-437a-a193-89a4da030d1f",
+    "type" : "OPENAI_ANSWER_FAILED",
+    "message" : "OpenAI answer generation failed",
+    "documentId" : null,
+    "detail" : {
+      "model" : "gpt-5.5",
+      "error" : "OpenAI request failed: 404 : \"{\"error\":\"当前 API 不支持所选模型 gpt-5.5\",\"type\":\"error\"}\""
+    },
+    "createdAt" : "2026-06-12T11:42:52.9658856"
+  }, {
+    "id" : "8a37d1e3-24cf-4b9d-91a0-5f3805d803c4",
+    "type" : "SENTINEL_INIT",
+    "message" : "Sentinel 规则已加载",
+    "documentId" : null,
+    "detail" : {
+      "uploadQps" : 1,
+      "chatQps" : 5,
+      "reindexConcurrency" : 1,
+      "embeddingMaxConcurrency" : 4,
+      "hybridSearchMaxConcurrency" : 8,
+      "llmMaxConcurrency" : 3,
+      "rerankMaxConcurrency" : 3,
+      "llmSlowCallRtMillis" : 5000,
+      "exceptionRatio" : 0.3,
+      "circuitBreakWindowSeconds" : 30
+    },
+    "createdAt" : "2026-06-12T11:42:30.5739188"
+  }, {
+    "id" : "53cfa1b4-b554-465c-9e5a-de1892c7c5ac",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "hitCount" : 5,
+      "question" : "祝博远是谁",
+      "provider" : "openai",
+      "model" : "gpt-5.5"
+    },
+    "createdAt" : "2026-06-11T20:54:18.2599305"
+  }, {
+    "id" : "70a91e6a-dd46-4b49-9dfd-f56af916384a",
+    "type" : "INDEX_DONE",
+    "message" : "Document indexed",
+    "documentId" : "ba727961-1d5a-4a0f-85ba-8e3f96b81cb7",
+    "detail" : {
+      "chunkCount" : 1
+    },
+    "createdAt" : "2026-06-11T20:53:03.3849506"
+  }, {
+    "id" : "5351b3ad-5090-4538-859b-8269acd0f8b9",
+    "type" : "INDEX_START",
+    "message" : "Start indexing document",
+    "documentId" : "ba727961-1d5a-4a0f-85ba-8e3f96b81cb7",
+    "detail" : {
+      "rebuild" : false
+    },
+    "createdAt" : "2026-06-11T20:53:03.3341372"
+  }, {
+    "id" : "dfa88b22-10ab-4e41-8ff5-4d9e17cc4ee8",
+    "type" : "MQ_DISABLED",
+    "message" : "RocketMQ disabled, use local async indexing",
+    "documentId" : "ba727961-1d5a-4a0f-85ba-8e3f96b81cb7",
+    "detail" : { },
+    "createdAt" : "2026-06-11T20:53:03.3172991"
+  }, {
+    "id" : "9fc349cd-507c-4a8d-8fce-b9c74bef6d94",
+    "type" : "UPLOAD",
+    "message" : "Document uploaded",
+    "documentId" : "ba727961-1d5a-4a0f-85ba-8e3f96b81cb7",
+    "detail" : {
+      "fileName" : "s.txt",
+      "size" : 58
+    },
+    "createdAt" : "2026-06-11T20:53:03.3119462"
+  }, {
+    "id" : "4b315af2-a98d-4d44-9e4f-0a970cab5cde",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "hitCount" : 5,
+      "question" : "向量检索方案0001的基本定义",
+      "provider" : "openai",
+      "model" : "gpt-5.5"
+    },
+    "createdAt" : "2026-06-11T20:51:34.5254705"
+  }, {
+    "id" : "0ec88d45-3662-4185-8469-55079ef344e5",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "hitCount" : 5,
+      "question" : "向量检索方案的基本定义",
+      "provider" : "openai",
+      "model" : "gpt-5.5"
+    },
+    "createdAt" : "2026-06-11T20:51:27.8996924"
+  }, {
+    "id" : "cba66872-c027-42a0-8b9a-6c2b0f06d587",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "hitCount" : 5,
+      "question" : "向量检索的调优方法",
+      "provider" : "openai",
+      "model" : "gpt-5.5"
+    },
+    "createdAt" : "2026-06-11T20:50:27.9210377"
+  }, {
+    "id" : "bd8b21d1-1dc8-4d09-bcb4-d8ed10b4a653",
+    "type" : "CHAT",
+    "message" : "Question answered",
+    "documentId" : null,
+    "detail" : {
+      "hitCount" : 5,
+      "question" : "向量检索的调优方法",
+      "provider" : "openai",
+      "model" : "gpt-5.5"
+    },
+    "createdAt" : "2026-06-11T20:50:01.543474"
+  }, {
     "id" : "6317ecb1-4551-436c-8b46-a0ff05f2900e",
     "type" : "CHAT",
     "message" : "Question answered",

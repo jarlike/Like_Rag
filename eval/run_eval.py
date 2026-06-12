@@ -15,12 +15,20 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import EMBED_DIM, embed_texts, esc, run_psql, to_tsquery_expr, vec_literal
+from common import EMBED_DIM, chat_complete, embed_texts, esc, run_psql, to_tsquery_expr, vec_literal
 
 EVAL_DOC_ID = "eval-synth"
 RRF_K = 60
 MMR_LAMBDA = 0.7
 MMR_DUP = 0.92
+
+# 与 app RerankService.SYSTEM_PROMPT 同义：LLM listwise 相关性打分(0~3)，输出 JSON 数组。
+RERANK_SYSTEM = (
+    "你是检索结果重排序器。给定一个问题和若干候选片段，判定每个候选与问题的相关性等级：\n"
+    "0=无关，1=弱相关，2=相关，3=强相关。\n"
+    "只输出一个 JSON 数组，每个元素形如 {\"id\":候选编号,\"score\":相关性等级}，"
+    "覆盖所有候选编号，按相关性从高到低排序。不要输出 JSON 以外的任何文字。"
+)
 
 
 def fake_embed(texts):
@@ -92,6 +100,74 @@ def fetch_vecs(ids):
     return vecs
 
 
+def fetch_texts(ids, max_chars):
+    """取候选片段正文（折叠空白、按 max_chars 截断），供重排序 prompt 用。"""
+    if not ids:
+        return {}
+    idlist = ",".join("'%s'" % esc(i) for i in ids)
+    sql = ("SELECT id, left(regexp_replace(text, E'[\\n\\t\\r]+', ' ', 'g'), %d) "
+           "FROM rag_chunks WHERE id IN (%s)" % (max_chars, idlist))
+    out = {}
+    for r in run_psql(sql, fetch=True).splitlines():
+        if not r:
+            continue
+        p = r.split("\t", 1)
+        out[p[0]] = p[1] if len(p) > 1 else ""
+    return out
+
+
+def parse_rerank_scores(output, count):
+    """复现 app RerankService.parseScores：容忍围栏/多余文字，取首个 JSON 数组，id→[0,3]。"""
+    s, e = output.find("["), output.rfind("]")
+    if s < 0 or e <= s:
+        return {}
+    try:
+        arr = json.loads(output[s:e + 1])
+    except Exception:
+        return {}
+    if not isinstance(arr, list):
+        return {}
+    res = {}
+    for item in arr:
+        if not isinstance(item, dict) or "id" not in item:
+            continue
+        try:
+            i = int(item["id"])
+        except (TypeError, ValueError):
+            continue
+        if i < 1 or i > count:
+            continue
+        try:
+            sc = float(item.get("score", 0))
+        except (TypeError, ValueError):
+            sc = 0.0
+        res.setdefault(i, max(0.0, min(3.0, sc)))
+    return res
+
+
+def llm_rerank(query, items, topk, max_chars):
+    """items: [(chunk_id, text)] 按融合顺序。LLM listwise 重排后返回 chunk_id 列表(裁剪到 topk)。
+    任何失败/解析不出 → 退回原顺序，与 app 的优雅降级一致。"""
+    if not items:
+        return []
+    lines = ["问题：%s" % query, "", "候选片段："]
+    for i, (_, text) in enumerate(items, 1):
+        lines.append("[%d] %s" % (i, (text or "")[:max_chars]))
+        lines.append("")
+    try:
+        out = chat_complete(RERANK_SYSTEM, "\n".join(lines), max_tokens=512)
+    except SystemExit:
+        raise
+    except Exception:
+        return [cid for cid, _ in items][:topk]
+    scores = parse_rerank_scores(out, len(items))
+    if not scores:
+        return [cid for cid, _ in items][:topk]
+    # 稳定降序：分数相等保持原相对顺序（Python sort 稳定）。
+    order = sorted(range(len(items)), key=lambda idx: scores.get(idx + 1, -1.0), reverse=True)
+    return [items[idx][0] for idx in order][:topk]
+
+
 def rrf_fuse(dense_ids, sparse_ids, k=RRF_K):
     score = {}
     for rank, did in enumerate(dense_ids, 1):
@@ -158,13 +234,17 @@ def main():
     ap.add_argument("--k", type=int, nargs="+", default=[5, 10])
     ap.add_argument("--topn", type=int, default=50, help="每路召回候选数（hybrid 融合用）")
     ap.add_argument("--fake-embed", action="store_true")
+    ap.add_argument("--rerank", action="store_true",
+                    help="额外评测 hybrid+rerank（每条 query 调用一次 LLM，会产生费用，需 OPENAI_API_KEY）")
+    ap.add_argument("--rerank-candidates", type=int, default=20, help="送入重排序的候选池大小")
+    ap.add_argument("--rerank-max-chars", type=int, default=500, help="每个候选进入重排序 prompt 的最大字符数")
     args = ap.parse_args()
 
     queries = [json.loads(l) for l in open(os.path.join(args.data, "queries.jsonl"), encoding="utf-8")]
     qrels = json.load(open(os.path.join(args.data, "qrels.json"), encoding="utf-8"))
     embed_fn = fake_embed if args.fake_embed else embed_texts
     maxk = max(args.k)
-    routes = ["dense", "sparse", "hybrid"]
+    routes = ["dense", "sparse", "hybrid"] + (["hybrid+rerank"] if args.rerank else [])
     agg = {r: {"mrr": 0.0} for r in routes}
     for r in routes:
         for k in args.k:
@@ -182,6 +262,11 @@ def main():
         fused = rrf_fuse(dense_ids, sparse_ids)
         hybrid_ids = mmr(fused, vecs, maxk)
         results = {"dense": dense_ids, "sparse": sparse_ids, "hybrid": hybrid_ids}
+        if args.rerank:
+            pool = mmr(fused, vecs, max(args.rerank_candidates, maxk))
+            texts = fetch_texts(pool, args.rerank_max_chars)
+            items = [(cid, texts.get(cid, "")) for cid in pool]
+            results["hybrid+rerank"] = llm_rerank(q["text"], items, maxk, args.rerank_max_chars)
         for r in routes:
             ids = results[r]
             for k in args.k:
@@ -194,12 +279,12 @@ def main():
           (n, EVAL_DOC_ID, ", FAKE向量" if args.fake_embed else ""))
     cols = "  ".join("nDCG@%d" % k for k in args.k) + "   " + \
            "  ".join("Recall@%d" % k for k in args.k) + "   MRR"
-    print("%-8s %s" % ("route", cols))
+    print("%-14s %s" % ("route", cols))
     for r in routes:
         vals = ["%.4f" % (agg[r][("ndcg", k)] / n) for k in args.k]
         vals += ["%.4f" % (agg[r][("recall", k)] / n) for k in args.k]
         vals.append("%.4f" % (agg[r]["mrr"] / n))
-        print("%-8s %s" % (r, "   ".join(vals)))
+        print("%-14s %s" % (r, "   ".join(vals)))
 
 
 if __name__ == "__main__":

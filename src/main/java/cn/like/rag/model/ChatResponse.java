@@ -8,6 +8,10 @@ public class ChatResponse {
     private String answer;
     private String provider;
     private String model;
+    /** 多轮会话 ID（回显，便于客户端续话）。 */
+    private String sessionId;
+    /** 追问改写后的独立检索问题；未发生改写时为 null。 */
+    private String rewrittenQuestion;
     private List<Citation> citations;
     private List<SearchHit> hits;
 
@@ -41,6 +45,22 @@ public class ChatResponse {
 
     public void setModel(String model) {
         this.model = model;
+    }
+
+    public String getSessionId() {
+        return sessionId;
+    }
+
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+    }
+
+    public String getRewrittenQuestion() {
+        return rewrittenQuestion;
+    }
+
+    public void setRewrittenQuestion(String rewrittenQuestion) {
+        this.rewrittenQuestion = rewrittenQuestion;
     }
 
     public List<Citation> getCitations() {

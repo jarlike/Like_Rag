@@ -83,19 +83,33 @@ public class OpenAiClientService {
     }
 
     public String generateAnswer(String question, List<SearchHit> hits) {
+        return generateAnswer(question, hits, null);
+    }
+
+    /**
+     * 在 RAG 问答基础上可选注入多轮对话历史（仅用于理解追问/指代，不作为作答证据）。
+     * conversationContext 为空时与单轮行为一致。
+     */
+    public String generateAnswer(String question, List<SearchHit> hits, String conversationContext) {
         requireApiKey();
         List<SearchHit> rankedHits = hits.stream()
                 .sorted(Comparator.comparingDouble(SearchHit::getScore).reversed())
                 .toList();
 
+        boolean hasHistory = conversationContext != null && !conversationContext.isBlank();
         String system = "你是一个严格的 RAG 问答生成器。\n"
                 + "只能使用用户提供的 Context 片段作答，不要使用外部知识或自由发挥。\n"
                 + "Context 已按相似度从高到低排列，优先依据靠前且 score 更高的片段。\n"
+                + (hasHistory ? "对话历史仅用于理解本轮追问的指代与省略，不能作为作答证据，证据只来自 Context。\n" : "")
                 + "如果片段不足以回答，直接说明“检索到的文档片段不足以回答”。\n"
                 + "回答必须和问题使用同一种语言。\n"
                 + "每个关键结论后都要用 [1] 这种编号引用对应片段，编号必须和 Context 匹配。";
 
         StringBuilder user = new StringBuilder();
+        if (hasHistory) {
+            user.append("Conversation history (for reference only, not evidence):\n")
+                    .append(conversationContext.trim()).append("\n\n");
+        }
         user.append("Question:\n").append(question == null ? "" : question.trim()).append("\n\n");
         user.append("Context (ranked by semantic similarity, highest first):\n");
         for (int i = 0; i < rankedHits.size(); i++) {
@@ -114,9 +128,9 @@ public class OpenAiClientService {
 
         String outputText;
         if (useResponsesEndpoint()) {
-            outputText = generateWithResponses(system, user.toString());
+            outputText = generateWithResponses(system, user.toString(), 700);
         } else {
-            outputText = generateWithChatCompletions(system, user.toString());
+            outputText = generateWithChatCompletions(system, user.toString(), 700);
         }
         if (outputText.isBlank()) {
             throw new IllegalStateException("OpenAI response does not contain output text");
@@ -124,25 +138,40 @@ public class OpenAiClientService {
         return outputText;
     }
 
-    private String generateWithResponses(String system, String user) {
+    /**
+     * 通用单轮补全：给定 system 指令与 user 输入，返回模型文本输出。
+     * 供 Agent（Plan-and-Solve 计划生成 / ReAct 决策）复用，与 {@link #generateAnswer} 共享底层调用与重试。
+     */
+    public String complete(String system, String user, int maxOutputTokens) {
+        requireApiKey();
+        String outputText = useResponsesEndpoint()
+                ? generateWithResponses(system, user, maxOutputTokens)
+                : generateWithChatCompletions(system, user, maxOutputTokens);
+        if (outputText.isBlank()) {
+            throw new IllegalStateException("OpenAI response does not contain output text");
+        }
+        return outputText;
+    }
+
+    private String generateWithResponses(String system, String user, int maxOutputTokens) {
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("model", properties.getOpenai().getChatModel());
         body.put("instructions", system);
         body.put("input", user);
-        body.put("max_output_tokens", 700);
+        body.put("max_output_tokens", maxOutputTokens);
 
         JsonNode root = post("/responses", body);
         return extractResponsesOutputText(root);
     }
 
-    private String generateWithChatCompletions(String system, String user) {
+    private String generateWithChatCompletions(String system, String user, int maxTokens) {
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("model", properties.getOpenai().getChatModel());
         body.put("messages", List.of(
                 Map.of("role", "system", "content", system),
                 Map.of("role", "user", "content", user)
         ));
-        body.put("max_tokens", 700);
+        body.put("max_tokens", maxTokens);
 
         JsonNode root = post("/chat/completions", body);
         return extractChatCompletionsOutputText(root);

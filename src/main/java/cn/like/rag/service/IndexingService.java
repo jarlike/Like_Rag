@@ -5,6 +5,8 @@ import cn.like.rag.model.RagChunk;
 import cn.like.rag.model.RagDocument;
 import cn.like.rag.repository.ChunkRepository;
 import cn.like.rag.repository.DocumentRepository;
+import cn.like.rag.sentinel.SentinelGuard;
+import cn.like.rag.sentinel.SentinelResources;
 import cn.like.rag.service.parser.DocumentParser;
 import cn.like.rag.service.parser.DocumentParserRegistry;
 import cn.like.rag.util.PostgresTextSanitizer;
@@ -26,19 +28,22 @@ public class IndexingService {
     private final Chunker chunker;
     private final EmbeddingService embeddingService;
     private final OperationLogService operationLogService;
+    private final SentinelGuard sentinelGuard;
 
     public IndexingService(DocumentRepository documentRepository,
                            ChunkRepository chunkRepository,
                            DocumentParserRegistry parserRegistry,
                            Chunker chunker,
                            EmbeddingService embeddingService,
-                           OperationLogService operationLogService) {
+                           OperationLogService operationLogService,
+                           SentinelGuard sentinelGuard) {
         this.documentRepository = documentRepository;
         this.chunkRepository = chunkRepository;
         this.parserRegistry = parserRegistry;
         this.chunker = chunker;
         this.embeddingService = embeddingService;
         this.operationLogService = operationLogService;
+        this.sentinelGuard = sentinelGuard;
     }
 
     public void indexDocument(String documentId, boolean rebuild) {
@@ -80,7 +85,8 @@ public class IndexingService {
                     chunk.setDocumentName(PostgresTextSanitizer.clean(document.getFileName()));
                     chunk.setChunkIndex(index);
                     chunk.setText(text);
-                    chunk.setVector(embeddingService.embed(text));
+                    chunk.setVector(sentinelGuard.call(SentinelResources.SERVICE_EMBEDDING,
+                            () -> embeddingService.embed(text)));
                     chunk.setSectionPath(sectionPath);
                     chunk.setSearchText(embeddingService.buildSearchText(
                             text, sectionPath, PostgresTextSanitizer.clean(document.getFileName())));

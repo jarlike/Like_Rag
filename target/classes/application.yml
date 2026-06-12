@@ -36,6 +36,47 @@ rag:
     enabled: false
     topic: like-rag-index-topic
     consumer-group: like-rag-index-consumer
+  sentinel:
+    enabled: true
+    upload-qps: 1
+    chat-qps: 5
+    reindex-concurrency: 1
+    embedding-max-concurrency: 4
+    hybrid-search-max-concurrency: 8
+    llm-max-concurrency: 3
+    rerank-max-concurrency: 3
+    llm-slow-call-rt-millis: 5000
+    exception-ratio: 0.3
+    circuit-break-window-seconds: 30
+    min-request-amount: 5
+  agent:
+    enabled: true
+    max-tool-calls: 6
+    max-sub-tasks: 5
+    max-run-millis: 30000
+    max-react-steps-per-subtask: 4
+    tool-search-top-k: 5
+    planning-enabled: true
+  eval:
+    data-dir: eval/data
+    ks: 5,10
+    top-n: 50
+    ndcg-gate: 0.75
+    recall-gate: 0.80
+    mrr-gate: 0.70
+  rerank:
+    enabled: true
+    candidate-k: 20
+    max-candidate-chars: 500
+    max-output-tokens: 512
+  conversation:
+    enabled: true
+    rewrite-enabled: true
+    max-turns: 6
+    max-history-chars: 4000
+    max-stored-answer-chars: 1000
+    session-ttl-seconds: 1800
+    max-sessions: 1000
 
 logging:
   level:
